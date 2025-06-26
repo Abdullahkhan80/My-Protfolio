@@ -160,7 +160,7 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
       src="https://lottie.host/41518083-9381-4705-9e4c-995413de7025/v6EhjoT6w9.lottie"
       loop
       autoplay
-      style={{ height: 50 , display: 'flex' }}
+      style={{ height: 80 , display: 'flex' }}
     />
     </div>
                 <a
