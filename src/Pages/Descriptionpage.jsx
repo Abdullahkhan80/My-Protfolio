@@ -76,7 +76,7 @@ const Descriptionpage = () => {
           transition={{ duration: 0.5 }}
           className="max-w-7xl mx-auto"
         >
-          <div className="absolute inset-10 mt-5 overflow-x-auto  scrollbar-hide transition-all  rounded-xl md:p-10 bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-lg ">
+          <div className="absolute inset-5 mt-10 overflow-x-auto  scrollbar-hide transition-all  rounded-xl md:p-10 bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-lg ">
             <div className="absolute  inset-0  opacity-50 group-hover:opacity-70 transition-opacity duration-1000"></div>
 
             <div className="relative p-5 z-10">
