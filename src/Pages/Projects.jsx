@@ -24,24 +24,45 @@ const Projects = () => {
         transition={{ duration: 0.5 }}
         className="max-w-7xl mx-auto"
       >
-        <h2 className="inline-block text-3xl md:text-5xl p-5 font-bold text-center mx-auto text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-[#a855f7]">
+        <motion.h2 
+          className="inline-block text-3xl md:text-5xl p-5 font-bold text-center mx-auto text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-[#a855f7]"
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
           <span style={{ color: '#111', WebkitBackgroundClip: 'text', backgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
             My Projects
           </span>
-        </h2>
+        </motion.h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
-            <CardProject
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          {projects.map((project, index) => (
+            <motion.div 
               key={project.id}
-              Img={project.image}
-              Title={project.title}
-              Description={project.description}
-              Link={project.link}
-              id={project.id}
-            />
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ 
+                duration: 0.6, 
+                delay: 0.4 + index * 0.1,
+                ease: [0.25, 0.46, 0.45, 0.94]
+              }}
+            >
+              <CardProject
+                Img={project.image}
+                Title={project.title}
+                Description={project.description}
+                Link={project.link}
+                id={project.id}
+                index={index}
+              />
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </motion.div>
     </div>
   );

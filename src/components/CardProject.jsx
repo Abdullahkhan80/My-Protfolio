@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ExternalLink, ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
-const CardProject = ({ Img, Title, Description, Link: ProjectLink, id }) => {
+const CardProject = ({ Img, Title, Description, Link: ProjectLink, id, index = 0 }) => {
   // Handle empty  ProjectLink kosong
   const handleLiveDemo = (e) => {
     if (!ProjectLink) {
@@ -22,24 +23,64 @@ const CardProject = ({ Img, Title, Description, Link: ProjectLink, id }) => {
   
 
   return (
-    <div className="group relative w-full">
+    <motion.div 
+      className="group relative w-full"
+      initial={{ opacity: 0, y: 50, scale: 0.9 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{ 
+        duration: 0.6, 
+        delay: index * 0.1,
+        ease: [0.25, 0.46, 0.45, 0.94]
+      }}
+      whileHover={{ 
+        y: -10,
+        transition: { duration: 0.3 }
+      }}
+    >
             
-      <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-lg border border-white/10 shadow-2xl transition-all duration-300 hover:shadow-purple-500/20">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
+      <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-lg border border-white/10 shadow-2xl transition-all duration-500 hover:shadow-purple-500/30 hover:shadow-2xl">
+        <motion.div 
+          className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-50 group-hover:opacity-70 transition-opacity duration-300"
+          whileHover={{ 
+            scale: 1.05,
+            transition: { duration: 0.3 }
+          }}
+        ></motion.div>
     
         <div className="relative p-5 z-10">
-          <div className="relative overflow-hidden rounded-lg">
-            <img
+          <motion.div 
+            className="relative overflow-hidden rounded-lg"
+            whileHover={{ 
+              scale: 1.02,
+              transition: { duration: 0.3 }
+            }}
+          >
+            <motion.img
               src={Img}
               alt={Title}
-              className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+              className="w-full h-full object-cover"
+              whileHover={{ 
+                scale: 1.1,
+                transition: { duration: 0.5 }
+              }}
             />
-          </div>
+          </motion.div>
           
-          <div className="mt-4 space-y-3">
-            <h3 className="text-xl font-semibold bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 bg-clip-text text-transparent">
+          <motion.div 
+            className="mt-4 space-y-3"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 + index * 0.1, duration: 0.5 }}
+          >
+            <motion.h3 
+              className="text-xl font-semibold bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 bg-clip-text text-transparent"
+              whileHover={{ 
+                scale: 1.02,
+                transition: { duration: 0.2 }
+              }}
+            >
               {Title}
-            </h3>
+            </motion.h3>
             
             <p className="text-gray-300/80 text-sm leading-relaxed line-clamp-2">
               {Description}
@@ -47,16 +88,22 @@ const CardProject = ({ Img, Title, Description, Link: ProjectLink, id }) => {
             
             <div className="pt-4 flex items-center justify-between">
               {ProjectLink ? (
-                <a
-                href={ProjectLink || "#"}
+                <motion.a
+                  href={ProjectLink || "#"}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={handleLiveDemo}
                   className="inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-200"
+                  whileHover={{ 
+                    scale: 1.05,
+                    x: 5,
+                    transition: { duration: 0.2 }
+                  }}
+                  whileTap={{ scale: 0.95 }}
                 >
                   <span className="text-sm font-medium">Live Demo</span>
                   <ExternalLink className="w-4 h-4" />
-                </a>
+                </motion.a>
               ) : (
                 <span className="text-gray-500 text-sm"></span>
               )}
@@ -64,24 +111,38 @@ const CardProject = ({ Img, Title, Description, Link: ProjectLink, id }) => {
      
 
               {id ? (
-                <Link
-                  to={`/projects/Descriptionpage/${id}`}
-                  onClick={handleDetails}
-                  className="inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-white/90 transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-purple-500/50"
+                <motion.div
+                  whileHover={{ 
+                    scale: 1.05,
+                    transition: { duration: 0.2 }
+                  }}
+                  whileTap={{ scale: 0.95 }}
                 >
-                  <span className="text-sm font-medium">Details</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
+                  <Link
+                    to={`/projects/Descriptionpage/${id}`}
+                    onClick={handleDetails}
+                    className="inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-white/90 transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-purple-500/50"
+                  >
+                    <span className="text-sm font-medium">Details</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </motion.div>
               ) : (
                 <span className="text-gray-500 text-sm"></span>
               )}
             </div>
-          </div>
+          </motion.div>
           
-          <div className="absolute inset-0 border border-white/0 group-hover:border-purple-500/50 rounded-xl transition-colors duration-300 -z-50"></div>
+          <motion.div 
+            className="absolute inset-0 border border-white/0 group-hover:border-purple-500/50 rounded-xl transition-colors duration-300 -z-50"
+            whileHover={{ 
+              scale: 1.02,
+              transition: { duration: 0.3 }
+            }}
+          ></motion.div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

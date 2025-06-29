@@ -42,18 +42,18 @@ export default projects
 export const achievements = [
 
   {
-    id: 1,
-    title: "Web development Hackathon Certificate",
-    description: "Awarded by MSLA for outstanding performance and innovative solutions during the Web Development Hackathon. Demonstrated strong teamwork, problem-solving skills, and the ability to deliver a complete web application under time constraints",
-    image: "/acheivements/certificate.jpg",
-    link: "https://white-space-psi.vercel.app/"
-  },
-  {
     id: 2,
     title: " Certificate of lead",
     description: "Awarded by Google in affiliation with Fluxxion for demonstrating exceptional leadership skills and successfully guiding a team through challenging project milestones.",
     image: "/acheivements/certificate5.jpg",
     link: "/Acheivements"
+  },
+  {
+    id: 1,
+    title: "Web development Hackathon Certificate",
+    description: "Awarded by MSLA for outstanding performance and innovative solutions during the Web Development Hackathon. Demonstrated strong teamwork, problem-solving skills, and the ability to deliver a complete web application under time constraints",
+    image: "/acheivements/certificate.jpg",
+    link: "https://white-space-psi.vercel.app/"
   },
   {
     id: 3,
