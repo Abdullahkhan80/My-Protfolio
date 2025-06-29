@@ -3,11 +3,10 @@ import Navbar from "../components/Navbar";
 import AnimatedBackground from "../components/Background";
 import { motion } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
-
-
+import projects from '../components/projects';
 const Descriptionpage = () => {
   const { id } = useParams();
-  const project = projects.find((p) => p.id === id);
+  const project = projects.find((p) => p.id === Number(id));
 
   if (!project) {
     return (
