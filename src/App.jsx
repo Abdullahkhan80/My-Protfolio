@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React, { useState } from 'react';
 import "./index.css";
 import Home from "./Pages/Home.jsx";
+import Featured from "./Pages/Featured";
 import About from "./Pages/About";
 import AnimatedBackground from "./components/Background";
 import Navbar from "./components/Navbar";
@@ -10,6 +11,8 @@ import WelcomeScreen from "./Pages/WelcomeScreen";
 import { AnimatePresence } from 'framer-motion';
 import Projects from "./Pages/Projects";
 import Descriptionpage from "./Pages/Descriptionpage";
+import Acheivements from "./Pages/Acheivements.jsx";
+import Certificate from "./components/Certificate.jsx";
 const LandingPage = ({ showWelcome, setShowWelcome }) => {
   return (
     <>
@@ -25,6 +28,12 @@ const LandingPage = ({ showWelcome, setShowWelcome }) => {
           <AnimatedBackground />
           <Home />
           <About />
+          <div id="Porjects">
+          <Featured />
+          </div>
+          <div id="Acheivements" >
+          <Certificate/>
+          </div>
           <ContactPage />
           <footer>
             <center>
@@ -46,7 +55,6 @@ const LandingPage = ({ showWelcome, setShowWelcome }) => {
 
 const ProjectPageLayout = () => (
   <>
-    <Navbar />
     <AnimatedBackground />
     <Projects />
     <footer>
@@ -73,6 +81,7 @@ function App() {
         <Route path="/" element={<LandingPage showWelcome={showWelcome} setShowWelcome={setShowWelcome} />} />
         <Route path="/projects" element={<ProjectPageLayout />} />
         <Route path="/projects/Descriptionpage/:id" element={<Descriptionpage />} />
+        <Route path="/Acheivements" element={<Acheivements/>} />
       </Routes>
     </BrowserRouter>
   );

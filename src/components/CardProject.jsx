@@ -3,18 +3,18 @@ import { Link } from 'react-router-dom';
 import { ExternalLink, ArrowRight } from 'lucide-react';
 
 const CardProject = ({ Img, Title, Description, Link: ProjectLink, id }) => {
-  // Handle kasus ketika ProjectLink kosong
+  // Handle empty  ProjectLink kosong
   const handleLiveDemo = (e) => {
     if (!ProjectLink) {
-      console.log("ProjectLink kosong");
+      console.log("ProjectLink empty");
       e.preventDefault();
-      alert("Live demo link is not available");
+      alert("Live demo link is not available")
     }
   };
   
   const handleDetails = (e) => {
     if (!id) {
-      console.log("ID kosong");
+      console.log("ID empty");
       e.preventDefault();
       alert("Project details are not available");
     }
@@ -58,7 +58,7 @@ const CardProject = ({ Img, Title, Description, Link: ProjectLink, id }) => {
                   <ExternalLink className="w-4 h-4" />
                 </a>
               ) : (
-                <span className="text-gray-500 text-sm">Demo Not Available</span>
+                <span className="text-gray-500 text-sm"></span>
               )}
               
      
@@ -73,7 +73,7 @@ const CardProject = ({ Img, Title, Description, Link: ProjectLink, id }) => {
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               ) : (
-                <span className="text-gray-500 text-sm">Details Not Available</span>
+                <span className="text-gray-500 text-sm"></span>
               )}
             </div>
           </div>

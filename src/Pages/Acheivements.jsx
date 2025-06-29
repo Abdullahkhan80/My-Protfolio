@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import CardProject from '../components/CardProject';
-import projects from '../components/projects';
+import { achievements } from '../components/projects';
 
 const Projects = () => {
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white pt-20 px-[5%]">
+    <div className=" text-white px-[5%]">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -14,20 +14,21 @@ const Projects = () => {
       >
         <h2 className="inline-block text-3xl md:text-5xl p-5 font-bold text-center mx-auto text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-[#a855f7]">
           <span style={{ color: '#111', WebkitBackgroundClip: 'text', backgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-            My Projects
+            My Achievements
           </span>
         </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
-            <CardProject
-              key={project.id}
-              Img={project.image}
-              Title={project.title}
-              Description={project.description}
-              Link={project.link}
-              id={project.id}
-            />
+        {/* Masonry layout using columns */}
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+          {achievements.map((project) => (
+            <div key={project.id} className="break-inside-avoid mb-6">
+              <CardProject
+                Img={project.image}
+                Title={project.title}
+                Description={project.description}
+                // Link={project.link}
+                // id={project.id}
+              />
+            </div>
           ))}
         </div>
       </motion.div>
