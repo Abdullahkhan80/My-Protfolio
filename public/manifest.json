@@ -1,0 +1,35 @@
+{
+  "name": "Abdullah - MERN Stack Developer Portfolio",
+  "short_name": "Abdullah Portfolio",
+  "description": "Professional portfolio of Abdullah, a MERN Stack Developer specializing in React, Node.js, Express.js, and MongoDB",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0a0a0a",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["productivity", "business", "developer"],
+  "icons": [
+    {
+      "src": "/Photo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/Photo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/Meta.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ]
+} 
