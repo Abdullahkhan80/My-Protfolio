@@ -1,11 +1,23 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { ArrowLeft } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import CardProject from '../components/CardProject';
 import projects from '../components/projects';
 
 const Projects = () => {
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white pt-20 px-[5%]">
+      {/* Back Button */}
+      <div className="absolute top-6 left-6 z-50">
+        <Link to="/">
+          <button className="flex items-center gap-2 px-4 py-2 bg-gray-900/50 backdrop-blur-lg rounded-lg border border-white/10 text-white hover:bg-gray-800/70 transition-all duration-300 hover:scale-105">
+            <ArrowLeft className="w-4 h-4" />
+            Back to Home
+          </button>
+        </Link>
+      </div>
+
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

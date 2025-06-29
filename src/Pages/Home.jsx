@@ -1,9 +1,11 @@
 import React, { useEffect, memo, useMemo } from "react"
-import { FileText, Code, Award, Globe, ArrowUpRight, Sparkles, UserCheck } from "lucide-react"
+import { FileText, Code, Award, Globe, ArrowUpRight, Sparkles, UserCheck, ArrowLeft } from "lucide-react"
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import Techstacks from "../components/Techstacks"
 import { Link } from 'react-router-dom'
+
+
 
 // Memoized Components
 const Header = memo(() => (
