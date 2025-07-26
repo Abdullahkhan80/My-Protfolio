@@ -5,7 +5,6 @@ export const projects = [
     title: "PIXORA Image Generator",
     description: "PIXORA is an innovative SaaS application that harnesses the power of artificial intelligence to transform images into descriptive text. This intuitive tool allows users to upload any image and receive a detailed, accurate textual description, making visual content accessible and searchable. Perfect for content creators, developers, and businesses, PIXORA streamlines the process of extracting meaningful insights and metadata from images, enhancing everything from SEO to accessibility.",
     image: "/projects/project7.png",
-    link: "https://white-space-psi.vercel.app/"
   },
   {
 
