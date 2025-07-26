@@ -13,7 +13,9 @@
 	scrollbar-color:  #1D7C7C #111818;
 }
 
-html,
+html{
+	background-color: black;
+}
 body {
 	overflow-x: hidden;
 	background: linear-gradient(to left, #111818, rgba(0, 0, 0, 0.637));
