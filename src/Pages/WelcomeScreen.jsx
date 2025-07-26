@@ -143,10 +143,18 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
                       Website
                     </span>
 
+               
                   </div>
                 </h1>
 
               </motion.div>
+              <div className="relative m-10 flex items-center justify-center">
+
+               <svg className="animate-spin h-16 w-16 text-purple-600 mb-4" viewBox="0 0 24 24">
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z" />
+              </svg>
+              </div>
 
               {/* Website Link */}
               <motion.div
@@ -155,9 +163,6 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
                 data-aos="fade-up"
                 data-aos-delay="1200"
               >
-                <div className="">
-
-                </div>
                 <a
                   href="https://www.Abdullahprotfolio"
                   className="inline-flex items-center gap-2 px-4 py-2 sm:px-6 sm:py-3 rounded-full relative group hover:scale-105 transition-transform duration-300"
@@ -166,12 +171,14 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-full blur-md group-hover:blur-lg transition-all duration-300" />
                   <div className="relative flex items-center gap-2 text-lg sm:text-xl md:text-2xl">
+                    
                     <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                     <span className="bg-gradient-to-r from-orange-600 to-purple-600 bg-clip-text text-transparent">
                       <TypewriterEffect text="www.Abdullah" />
                     </span>
                   </div>
                 </a>
+                
                 {/* <DotLottieReact
                   src="https://lottie.host/41518083-9381-4705-9e4c-995413de7025/v6EhjoT6w9.lottie"
                   loop

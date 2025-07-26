@@ -1,41 +1,50 @@
 export const projects = [
   {
+    
     id: 1,
+    title: "PIXORA Image Generator",
+    description: "PIXORA is an innovative SaaS application that harnesses the power of artificial intelligence to transform images into descriptive text. This intuitive tool allows users to upload any image and receive a detailed, accurate textual description, making visual content accessible and searchable. Perfect for content creators, developers, and businesses, PIXORA streamlines the process of extracting meaningful insights and metadata from images, enhancing everything from SEO to accessibility.",
+    image: "/projects/project7.png",
+    link: "https://white-space-psi.vercel.app/"
+  },
+  {
+
+    id: 2,
     title: "White Space Website",
     description: "A powerful project management platform designed to help teams collaborate, plan, and manage daily tasks",
     image: "/projects/project1.png",
     link: "https://white-space-psi.vercel.app/"
   },
   {
-    id: 2,
+    id: 3,
     title: "Gourmet Haven",
     description: "Gourmet Haven is a comprehensive, full-stack web application built using the MERN (MongoDB, Express.js, React.js, Node.js) stack, designed to deliver a seamless and interactive digital dining experience. This project showcases robust development across both the front-end and back-end, demonstrating a strong command of modern web technologies.On the front-end, crafted with React.js, users can explore a beautifully structured and intuitive menu, complete with detailed culinary offerings. The responsive user interface ensures an engaging experience across various devices. A key feature is the functional order form, allowing customers to effortlessly select items and submit their orders.The back-end, powered by Node.js and Express.js, provides a scalable and efficient API that handles all dynamic interactions. It seamlessly communicates with a MongoDB database, which securely stores and manages critical data such as menu items, customer orders, and potentially user information. This full-stack integration allows for real-time updates and persistent data storage, making Gourmet Haven a complete solution for a modern restaurant's online presence.This project highlights expertise in:Front-end Development: Building dynamic and interactive user interfaces with React.js.Back-end Development: Creating robust server-side logic and RESTful APIs with Node.js and Express.js.Database Management: Implementing data storage and retrieval using MongoDB.Full-Stack Integration: Connecting disparate components to form a cohesive and functional web application.Gourmet Haven is a comprehensive, full-stack web application built using the MERN (MongoDB, Express.js, React.js, Node.js) stack, designed to deliver a seamless and interactive digital dining experience. This project showcases robust development across both the front-end and back-end, demonstrating a strong command of modern web technologies.On the front-end, crafted with React.js, users can explore a beautifully structured and intuitive menu, complete with detailed culinary offerings. The responsive user interface ensures an engaging experience across various devices. A key feature is the functional order form, allowing customers to effortlessly select items and submit their orders.The back-end, powered by Node.js and Express.js, provides a scalable and efficient API that handles all dynamic interactions. It seamlessly communicates with a MongoDB database, which securely stores and manages critical data such as menu items, customer orders, and potentially user information. This full-stack integration allows for real-time updates and persistent data storage, making Gourmet Haven a complete solution for a modern restaurant's online presence.This project highlights expertise in:Front-end Development: Building dynamic and interactive user interfaces with React.js.Back-end Development: Creating robust server-side logic and RESTful APIs with Node.js and Express.js.Database Management: Implementing data storage and retrieval using MongoDB.Full-Stack Integration: Connecting disparate components to form a cohesive and functional web application.",
     image: "/projects/project6.png",
     link: "https://gourmet-haven-git-main-abdullahs-projects-ec45321a.vercel.app/"
   },
   {
-    id: 3,
+    id: 4,
     title: "Golf website",
     description: "A premium golf website offering everything from course details and memberships to event booking and training resources. Designed for golf enthusiasts, players, and clubs to connect and thrive.",
     image: "/projects/project3.png",
     // link: "https://project3.com"
   },
   {
-    id: 4,
+    id: 5,
     title: "burger website",
     description: "This burger website is your go-to destination for delicious, handcrafted burgers made with the freshest ingredients.",
     image: "/projects/project4.png",
     // link: "https://project3.com"
   },
   {
-    id: 5,
+    id:6,
     title: "Real state website",
     description: "A modern real estate website offering property listings, virtual tours, and expert guidance for buyers, sellers, and renters. Find your dream home or investment with ease.",
     image: "/projects/project5.png",
     // link: "https://project3.com"
   },
   {
-    id: 6,
+    id: 7,
     title: "Ai consultant website",
     description: "A webiste which provide expert AI consulting services to help businesses automate processes, enhance decision-making, and unlock data-driven growth. From strategy to deployment — we turn your AI vision into reality.",
     image: "/projects/project2.png",

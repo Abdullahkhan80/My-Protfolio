@@ -1,8 +1,8 @@
-import { useParams } from "react-router-dom";
-import Navbar from "../components/Navbar";
+import { useNavigate, useParams } from "react-router-dom";
 import AnimatedBackground from "../components/Background";
 import { motion } from 'framer-motion';
-import { ExternalLink } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
+import { ExternalLink, Link } from 'lucide-react';
 import projects from '../components/projects';
 const Descriptionpage = () => {
   const { id } = useParams();
@@ -23,10 +23,10 @@ const Descriptionpage = () => {
       alert("Live demo link is not available");
     }
   };
-
+const navigate=useNavigate();
   return (
     <>
-      <Navbar />
+      
       <AnimatedBackground />
       <div className="min-h-screen bg-[#0a0a0a] text-white pt-20 px-[5%]">
         <motion.div
@@ -35,6 +35,7 @@ const Descriptionpage = () => {
           transition={{ duration: 0.5 }}
           className="max-w-7xl mx-auto"
         >
+
           <div className="absolute inset-5 mt-10 overflow-x-auto  scrollbar-hide transition-all  rounded-xl md:p-10 bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-lg ">
             <div className="absolute  inset-0  opacity-50 group-hover:opacity-70 transition-opacity duration-1000"></div>
 
@@ -42,6 +43,12 @@ const Descriptionpage = () => {
               <div className="relative overflow-hidden rounded-lg">
 
                 <div className="max-w-4xl mx-auto  p-6 bg-gradient-to-br from-slate-900/90 to-slate-800/90 rounded-xl shadow-2xl border border-white/10 relative z-10">
+                  <div className="fixed top-6 left-6 z-50">
+                    <button onClick={(e) => navigate(-1)} className="flex items-center gap-2 px-4 py-2 bg-gray-900/50 backdrop-blur-lg rounded-lg border border-white/10 text-white hover:bg-gray-800/70 transition-all duration-300 hover:scale-105">
+                      <ArrowLeft className="w-4 h-4" />
+                      Back to Home
+                    </button>
+                </div>
                   <div className="flex flex-col items-center">
                     <img
                       src={project.image}
