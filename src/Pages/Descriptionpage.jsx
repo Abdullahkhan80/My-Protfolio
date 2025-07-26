@@ -35,20 +35,20 @@ const navigate=useNavigate();
           transition={{ duration: 0.5 }}
           className="max-w-7xl mx-auto"
         >
-
-          <div className="absolute inset-5 mt-10 overflow-x-auto  scrollbar-hide transition-all  rounded-xl md:p-10 bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-lg ">
-            <div className="absolute  inset-0  opacity-50 group-hover:opacity-70 transition-opacity duration-1000"></div>
-
-            <div className="relative p-5 z-10">
-              <div className="relative overflow-hidden rounded-lg">
-
-                <div className="max-w-4xl mx-auto  p-6 bg-gradient-to-br from-slate-900/90 to-slate-800/90 rounded-xl shadow-2xl border border-white/10 relative z-10">
-                  <div className="fixed top-6 left-6 z-50">
+           <div className="fixed  top-2 left-6 z-50">
                     <button onClick={(e) => navigate(-1)} className="flex items-center gap-2 px-4 py-2 bg-gray-900/50 backdrop-blur-lg rounded-lg border border-white/10 text-white hover:bg-gray-800/70 transition-all duration-300 hover:scale-105">
                       <ArrowLeft className="w-4 h-4" />
                       Back to Home
                     </button>
                 </div>
+          <div className="absolute inset-5 mt-10 overflow-x-auto  scrollbar-hide transition-all  rounded-xl md:p-10 bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-lg ">
+            <div className="absolute  inset-0  opacity-50 group-hover:opacity-70 transition-opacity duration-1000"></div>
+
+            <div className="relative p-5 z-10">
+                 
+              <div className="relative overflow-hidden rounded-lg">
+
+                <div className="max-w-4xl mx-auto  p-6 bg-gradient-to-br from-slate-900/90 to-slate-800/90 rounded-xl shadow-2xl border border-white/10 relative z-10">
                   <div className="flex flex-col items-center">
                     <img
                       src={project.image}
