@@ -7,7 +7,7 @@ import projects from '../components/projects';
 
 const Projects = () => {
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white pt-20 px-[5%]">
+    <div className="min-h-screen bg-[#0a0a0a] text-white pt-20 px-[5%] md:px-[7%] lg:px-[10%]">
       {/* Back Button */}
       <div className="absolute top-6 left-6 z-50">
         <Link to="/">
@@ -36,7 +36,7 @@ const Projects = () => {
         </motion.h2>
         
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}

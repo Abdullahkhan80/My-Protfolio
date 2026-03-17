@@ -109,14 +109,14 @@ const ContactPage = () => {
       </div>
 
       <div
-        className="h-auto mt-10  flex items-center gap-24 justify-center flex-wrap  px-[5%] md:px-0"
+        className="h-auto mt-10 flex items-start md:items-center gap-8 md:gap-12 justify-center flex-wrap px-[5%] md:px-[5%]"
         id="Contact"
       >
         <div className="  ">
           <div
             data-aos="fade-right"
             data-aos-duration="1200"
-            className="bg-white/5 backdrop-blur-xl rounded-3xl shadow-2xl p-5 py-10 sm:p-10 transform transition-all duration-300 hover:shadow-[#6366f1]/10"
+            className="w-full max-w-lg bg-white/5 backdrop-blur-xl rounded-3xl shadow-2xl p-5 py-10 sm:p-10 transform transition-all duration-300 hover:shadow-[#6366f1]/10"
           >
             <div className="flex justify-between items-start mb-8">
               <div>
@@ -208,9 +208,9 @@ const ContactPage = () => {
 
         </div>
         <div
-            data-aos="fade-right"
+            data-aos="fade-left"
             data-aos-duration="1200"
-            className="bg-white/5 backdrop-blur-xl rounded-3xl shadow-2xl p-5 py-10 sm:p-10 transform transition-all duration-300 hover:shadow-[#6366f1]/10"
+            className="w-full max-w-lg bg-white/5 backdrop-blur-xl rounded-3xl shadow-2xl p-5 py-10 sm:p-10 transform transition-all duration-300 hover:shadow-[#6366f1]/10"
           >
      <SocialLinks />
 

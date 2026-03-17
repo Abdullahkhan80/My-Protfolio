@@ -168,7 +168,7 @@ const Navbar = () => {
 
             {/* Mobile Menu Overlay */}
             <div
-                className={`md:hidden h-full fixed inset-0 bg-neutral-700 transition-all duration-300 ease-in-out ${
+                className={`md:hidden fixed inset-0 bg-neutral-700 transition-all duration-300 ease-in-out ${
                     isOpen
                         ? "opacity-100 translate-y-0"
                         : "opacity-0 translate-y-[-100%] pointer-events-none"

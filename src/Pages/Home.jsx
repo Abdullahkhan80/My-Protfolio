@@ -24,7 +24,7 @@ const Header = memo(() => (
 ));
 
 const ProfileImage = memo(() => (
-  <div className="flex justify-end items-center sm:p-12 sm:py-0 sm:pb-0 p-0 py-2 pb-2">
+  <div className="flex justify-end items-center md:p-8 md:py-0 md:pb-0 p-0 py-2 pb-2">
     <div 
       className="relative group" 
       data-aos="fade-up"
@@ -38,7 +38,7 @@ const ProfileImage = memo(() => (
       </div>
 
       <div className="relative">
-        <div className="w-72 h-72 sm:w-80 sm:h-80 rounded-full overflow-hidden shadow-[0_0_40px_rgba(120,119,198,0.3)] transform transition-all duration-700 group-hover:scale-105">
+        <div className="w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden shadow-[0_0_40px_rgba(120,119,198,0.3)] transform transition-all duration-700 group-hover:scale-105">
           <div className="absolute inset-0 border-4 border-white/20 rounded-full z-20 transition-all duration-700 group-hover:border-white/40 group-hover:scale-105" />
           
           {/* Optimized overlay effects - disabled on mobile */}
@@ -182,16 +182,16 @@ const AboutPage = () => {
 
   return (
     <div
-      className="h-auto pb-[10%] text-white overflow-hidden px-[5%] sm:px-[5%] lg:px-[10%] pt-20 sm-mt-0" 
+      className="h-auto pb-[10%] text-white overflow-hidden px-[5%] md:px-[7%] lg:px-[10%] pt-20" 
       id="About"
     >
       <Header />
 
       <div className="w-full mx-auto pt-8 sm:pt-12 relative">
-        <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          <div className="space-y-6 text-center lg:text-left">
+        <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-8 md:gap-10 lg:gap-16 items-center">
+          <div className="space-y-6 text-center md:text-left">
             <h2 
-              className="text-3xl sm:text-4xl lg:text-5xl font-bold"
+              className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold"
               data-aos="fade-right"
               data-aos-duration="1000"
             >
@@ -208,7 +208,7 @@ const AboutPage = () => {
             </h2>
             
             <p 
-              className="text-base sm:text-lg lg:text-xl text-gray-400 leading-relaxed text-justify pb-4 sm:pb-0"
+              className="text-sm sm:text-base md:text-base lg:text-xl text-gray-400 leading-relaxed text-justify pb-4 sm:pb-0"
               data-aos="fade-right"
               data-aos-duration="1500"
             >
@@ -216,21 +216,21 @@ const AboutPage = () => {
              Where Creativity Meets Function, I create Magic with Pixels! <br />I build websites with a focus on responsive design and accessibility. <br />Crafting Innovative Digital Experiences with Precision and Passion
             </p>
 
-            <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-4 lg:px-0 w-full">
-              <a href="https://drive.google.com/file/d/1PHDajwHuJ4GL0en5OwoFZoA54FME3xX-/view?usp=sharing" className="w-full lg:w-auto">
+            <div className="flex flex-col sm:flex-row items-center md:items-start gap-4 w-full">
+              <a href="https://drive.google.com/file/d/1PHDajwHuJ4GL0en5OwoFZoA54FME3xX-/view?usp=sharing" className="w-full sm:w-auto">
               <button 
                 data-aos="fade-up"
                 data-aos-duration="800"
-                className="w-full lg:w-auto sm:px-6 py-2 sm:py-3 rounded-lg bg-gradient-to-r from-orange-500 to-[#a855f7] text-white font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center lg:justify-start gap-2 shadow-lg hover:shadow-xl animate-bounce-slow"
+                className="w-full sm:w-auto px-6 py-2 sm:py-3 rounded-lg bg-gradient-to-r from-orange-500 to-[#a855f7] text-white font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl animate-bounce-slow"
               >
                 <FileText className="w-4 h-4 sm:w-5 sm:h-5" /> Download CV
               </button>
               </a>
-              <Link to="/projects" className="w-full lg:w-auto">
+              <Link to="/projects" className="w-full sm:w-auto">
               <button 
                 data-aos="fade-up"
                 data-aos-duration="1000"
-                className="w-full lg:w-auto sm:px-6 py-2 sm:py-3 rounded-lg border border-[#a855f7]/50 text-[#a855f7] font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center lg:justify-start gap-2 hover:bg-[#a855f7]/10 animate-bounce-slow delay-200"
+                className="w-full sm:w-auto px-6 py-2 sm:py-3 rounded-lg border border-[#a855f7]/50 text-[#a855f7] font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2 hover:bg-[#a855f7]/10 animate-bounce-slow delay-200"
               >
                 <Code className="w-4 h-4 sm:w-5 sm:h-5" /> View Projects
               </button>

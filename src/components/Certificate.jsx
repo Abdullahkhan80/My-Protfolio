@@ -11,7 +11,7 @@ const Certificate = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <div ref={ref} className="py-40 md:py-80  text-white text-center px-[5%]">
+    <div ref={ref} className="py-20 md:py-32 text-white text-center px-[5%]">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -19,7 +19,7 @@ const Certificate = () => {
         className="max-w-7xl mx-auto"
       >
         <motion.h2 
-          className="inline-block text-3xl md:text-5xl pb-10 md:py-20 font-bold text-center mx-auto text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-[#a855f7]"
+          className="inline-block text-3xl md:text-5xl pb-10 md:pb-16 font-bold text-center mx-auto text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-[#a855f7]"
           initial={{ opacity: 0, y: -30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -30 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -30,7 +30,7 @@ const Certificate = () => {
         </motion.h2>
         
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}

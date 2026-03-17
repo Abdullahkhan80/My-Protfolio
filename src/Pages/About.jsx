@@ -10,7 +10,7 @@ import 'aos/dist/aos.css'
 
 const MainTitle = memo(() => (
   <div className="space-y-2" data-aos="fade-up" data-aos-delay="600">
-    <h1 className="text-5xl sm:text-6xl md:text-6xl lg:text-6xl xl:text-7xl font-bold tracking-tight">
+    <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight">
       <span className="relative inline-block">
         <span className="absolute -inset-2 bg-gradient-to-r from-[#6366f1] to-[#a855f7] blur-2xl opacity-20"></span>
         <span className="relative bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
@@ -177,9 +177,9 @@ const Home = () => {
       </div>
       <div className={`relative z-10 transition-all duration-1000 ${isLoaded ? "opacity-100" : "opacity-0"}`}>
         <div className="container mx-auto px-[5%] sm:px-6 lg:px-[0%] min-h-screen">
-          <div className="flex flex-col lg:flex-row items-center justify-center h-screen md:justify-between gap-0 sm:gap-12 lg:gap-20">
+          <div className="flex flex-col lg:flex-row items-center justify-center min-h-screen md:justify-between gap-8 sm:gap-12 lg:gap-20">
             {/* Left Column */}
-            <div className="w-full lg:w-1/2 space-y-6 sm:space-y-8 text-left lg:text-left order-1 lg:order-1 lg:mt-0"
+            <div className="w-full lg:w-1/2 space-y-5 sm:space-y-6 text-left order-1 lg:order-1 lg:mt-0"
               data-aos="fade-right"
               data-aos-delay="200">
               <div className="space-y-4 sm:space-y-6">
@@ -195,7 +195,7 @@ const Home = () => {
                 </div>
 
                 {/* Description */}
-                <p className="text-base md:text-lg text-gray-400 max-w-xl leading-relaxed font-light"
+                <p className="text-sm sm:text-base md:text-base lg:text-lg text-gray-400 max-w-xl leading-relaxed font-light"
                   data-aos="fade-up"
                   data-aos-delay="1000">
                   Specializing in clean, functional design and cutting-edge development to help businesses make their mark online,
@@ -211,7 +211,7 @@ const Home = () => {
                 </div>
 
                 {/* CTA Buttons */}
-                <div className="flex flex-row gap-3 w-full justify-start" data-aos="fade-up" data-aos-delay="1400">
+                <div className="flex flex-row flex-wrap gap-3 w-full justify-start" data-aos="fade-up" data-aos-delay="1400">
                   <CTAButton href="/projects" text="Projects" icon={ExternalLink} />
                   <CTAButton href="#Contact" text="Contact Me" icon={Mail} />
                 </div>
@@ -226,7 +226,7 @@ const Home = () => {
             </div>
 
             {/* Right Column - Optimized Lottie Animation */}
-            <div className="w-full py-[10%] sm:py-0 lg:w-1/2 h-auto lg:h-[600px] xl:h-[750px] relative flex items-center justify-center order-2 lg:order-2 mt-8 lg:mt-0"
+            <div className="w-full py-[5%] sm:py-0 lg:w-1/2 h-[300px] sm:h-[400px] md:h-[450px] lg:h-[600px] xl:h-[750px] relative flex items-center justify-center order-2 lg:order-2 mt-4 lg:mt-0"
               onMouseEnter={() => setIsHovering(true)}
               onMouseLeave={() => setIsHovering(false)}
               data-aos="fade-left"

@@ -30,7 +30,7 @@ export default function TechStackOnly() {
   }, []);
 
   return (
-    <div className="md:px-[10%] px-[5%] w-full sm:mt-0 mt-[3rem] overflow-hidden" id="TechStack">
+    <div className="md:px-[5%] lg:px-[10%] px-[5%] w-full sm:mt-0 mt-[3rem] overflow-hidden" id="TechStack">
       {/* Header section */}
       <div className="text-center pb-10" data-aos="fade-up" data-aos-duration="1000">
         <h2 className="inline-block text-3xl md:text-5xl font-bold text-center mx-auto text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-[#a855f7]">
@@ -45,7 +45,7 @@ export default function TechStackOnly() {
 
       {/* Tech Stack Icons Section */}
       <div className="container mx-auto flex justify-center items-center overflow-hidden pb-[5%]">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 lg:gap-8 gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5 lg:gap-8">
           {techStacksData.map((stack, index) => (
             <div
               key={index}

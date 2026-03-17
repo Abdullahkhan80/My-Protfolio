@@ -7,7 +7,7 @@ import { achievements } from '../components/projects';
 
 const Projects = () => {
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white pt-20 px-[5%]">
+    <div className="min-h-screen bg-[#0a0a0a] text-white pt-20 px-[5%] md:px-[7%] lg:px-[10%]">
       {/* Back Button */}
       <div className="absolute top-6 left-6 z-50">
         <Link to="/">
@@ -30,7 +30,7 @@ const Projects = () => {
           </span>
         </h2>
         {/* Masonry layout using columns */}
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+        <div className="columns-1 sm:columns-2 md:columns-2 lg:columns-3 gap-6 space-y-6">
           {achievements.map((project) => (
             <div key={project.id} className="break-inside-avoid mb-6">
               <CardProject

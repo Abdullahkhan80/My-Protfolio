@@ -28,7 +28,7 @@ const navigate=useNavigate();
     <>
       
       <AnimatedBackground />
-      <div className="min-h-screen bg-[#0a0a0a] text-white pt-20 px-[5%]">
+      <div className="min-h-screen bg-[#0a0a0a] text-white pt-20 px-[5%] md:px-[7%] lg:px-[10%]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

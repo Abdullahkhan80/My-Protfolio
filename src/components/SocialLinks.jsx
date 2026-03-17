@@ -73,8 +73,8 @@ const SocialLinks = () => {
   const [instagram, youtube, github, tiktok] = otherLinks;
 
   return (
-    <div className=" bg-gradient-to-br  from-white/10 to-white/5 rounded-2xl p-6 py-32 backdrop-blur-xl">
-      <h3 className="text-xl font-semibold text-white mb-6 flex absolute p-5 top-0 items-center gap-2">
+    <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-6 pt-14 backdrop-blur-xl relative">
+      <h3 className="text-xl font-semibold text-white mb-6 flex absolute p-5 top-0 left-0 items-center gap-2">
         <span className="inline-block w-8 h-1 bg-indigo-500 rounded-full"></span>
         Connect With Me
       </h3>
@@ -142,7 +142,7 @@ const SocialLinks = () => {
 
 
         {/* Second Row - Instagram & YouTube */}
-        <div className="grid grid-cols-1 md:grid-cols-1 gap-4">
+        <div className="grid grid-cols-1 gap-4">
           {[instagram, youtube].map((link) => (
             <a
               key={link.name}
@@ -191,7 +191,7 @@ const SocialLinks = () => {
         </div>
 
         {/* Third Row - GitHub & TikTok */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-4">
           {[github, tiktok].map((link) => (
             <a
               key={link.name}
