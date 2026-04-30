@@ -16,7 +16,7 @@ const techStacks = [
   { icon: "nodejs.svg", language: "Node JS" },
   { icon: "bootstrap.svg", language: "Bootstrap" },
   { icon: "GSAP.svg", language: "GSAP" },
-  { icon: "MongoDB.webp", language: "Mongo DB" },
+  { icon: "MongoDb.png", language: "Mongo DB" },
   { icon: "Framer.webp", language: "Framer Motion" },
   { icon: "Github.webp", language: "Github" },
 ];
@@ -25,32 +25,31 @@ export default function TechStackOnly() {
   const [techStacksData, setTechStacksData] = useState([]);
   
   useEffect(() => {
-    AOS.init({ once: false });  // Initialize AOS animations once
-    setTechStacksData(techStacks); // Set the Tech Stack data to state
+    AOS.init({ once: true });
+    setTechStacksData(techStacks);
   }, []);
 
   return (
-    <div className="md:px-[5%] lg:px-[10%] px-[5%] w-full sm:mt-0 mt-[3rem] overflow-hidden" id="TechStack">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20" id="TechStack">
       {/* Header section */}
-      <div className="text-center pb-10" data-aos="fade-up" data-aos-duration="1000">
-        <h2 className="inline-block text-3xl md:text-5xl font-bold text-center mx-auto text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-[#a855f7]">
-          <span style={{ color: '#111', WebkitBackgroundClip: 'text', backgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-            Tech Stack
-          </span>
+      <div className="text-center mb-16" data-aos="fade-up" data-aos-duration="1000">
+        <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-[#a855f7] mb-4">
+          Tech Stack
         </h2>
-        <p className="text-slate-400 max-w-2xl mx-auto text-sm md:text-base mt-2">
+        <p className="text-gray-400 max-w-2xl mx-auto text-base md:text-lg">
           Explore the technologies I use to build applications and websites.
         </p>
       </div>
 
       {/* Tech Stack Icons Section */}
-      <div className="container mx-auto flex justify-center items-center overflow-hidden pb-[5%]">
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5 lg:gap-8">
+      <div className="flex justify-center items-center">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 sm:gap-8 w-full">
           {techStacksData.map((stack, index) => (
             <div
               key={index}
               data-aos={index % 3 === 0 ? "fade-up-right" : index % 3 === 1 ? "fade-up" : "fade-up-left"}
-              data-aos-duration={index % 3 === 0 ? "1000" : index % 3 === 1 ? "1200" : "1000"}
+              data-aos-duration="800"
+              className="h-full will-change-transform"
             >
               <TechStackIcon TechStackIcon={stack.icon} Language={stack.language} />
             </div>
