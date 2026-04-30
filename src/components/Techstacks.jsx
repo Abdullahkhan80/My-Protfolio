@@ -33,7 +33,7 @@ export default function TechStackOnly() {
     <div className="py-20" id="TechStack">
       {/* Header section */}
       <div className="text-center mb-16" data-aos="fade-up" data-aos-duration="1000">
-        <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-[#a855f7] mb-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-[#a855f7] mb-4">
           Tech Stack
         </h2>
         <p className="text-gray-400 max-w-2xl mx-auto text-base md:text-lg">

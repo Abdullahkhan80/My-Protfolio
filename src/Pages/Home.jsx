@@ -191,7 +191,7 @@ const AboutPage = () => {
         <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-8 md:gap-10 lg:gap-16 items-center">
           <div className="space-y-6 text-center md:text-left">
             <h2 
-              className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold"
+              className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold"
               data-aos="fade-right"
               data-aos-duration="1000"
             >
@@ -208,7 +208,7 @@ const AboutPage = () => {
             </h2>
             
             <p 
-              className="text-sm sm:text-base md:text-base lg:text-xl text-gray-400 leading-relaxed text-justify pb-4 sm:pb-0"
+              className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-400 leading-relaxed pb-4 sm:pb-0"
               data-aos="fade-right"
               data-aos-duration="1500"
             >
