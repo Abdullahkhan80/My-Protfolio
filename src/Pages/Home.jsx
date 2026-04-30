@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 
 // Memoized Components
 const Header = memo(() => (
-  <div className="text-center lg:mb-8 mb-2 px-[5%]">
+  <div className="text-center lg:mb-8 mb-2">
     
     <p 
       className="mt-2 text-gray-400 max-w-2xl mx-auto text-base sm:text-lg flex items-center justify-center gap-2"
