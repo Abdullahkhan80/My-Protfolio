@@ -212,8 +212,8 @@ const AboutPage = () => {
               data-aos="fade-right"
               data-aos-duration="1500"
             >
-             Self-taught MERN stack Developer, <br />
-             Where Creativity Meets Function, I create Magic with Pixels! <br />I build websites with a focus on responsive design and accessibility. <br />Crafting Innovative Digital Experiences with Precision and Passion
+             I create scalable Lead Management and CRM systems,
+             <br />Specializing in using the MERN stack and Next.js applications <br />Crafting Innovative Digital Experiences with Precision and Passion
             </p>
 
             <div className="flex flex-col sm:flex-row items-center md:items-start gap-4 w-full">

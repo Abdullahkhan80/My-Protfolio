@@ -7,16 +7,16 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const techStacks = [
-  { icon: "html.svg", language: "HTML" },
-  { icon: "css.svg", language: "CSS" },
+  { icon: "nextjs.png", language: "Next.js" },
+  { icon: "nodejs.svg", language: "Node JS" },
+  { icon: "reactjs.svg", language: "ReactJS" },
+  { icon: "MongoDb.png", language: "Mongo DB" },
+  { icon: "mysql.png", language: "MySQL" },
+  { icon: "firebase.png", language: "Firebase" },
   { icon: "javascript.svg", language: "JavaScript" },
   { icon: "tailwind.svg", language: "Tailwind CSS" },
-  { icon: "reactjs.svg", language: "ReactJS" },
   { icon: "vite.svg", language: "Vite" },
-  { icon: "nodejs.svg", language: "Node JS" },
-  { icon: "bootstrap.svg", language: "Bootstrap" },
   { icon: "GSAP.svg", language: "GSAP" },
-  { icon: "MongoDb.png", language: "Mongo DB" },
   { icon: "Framer.webp", language: "Framer Motion" },
   { icon: "Github.webp", language: "Github" },
 ];
