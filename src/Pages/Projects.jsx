@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -6,6 +6,10 @@ import CardProject from '../components/CardProject';
 import projects from '../components/projects';
 
 const Projects = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white pt-20 px-[5%] md:px-[7%] lg:px-[10%]">
       {/* Back Button */}

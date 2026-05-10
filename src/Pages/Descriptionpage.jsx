@@ -1,4 +1,5 @@
 import { useNavigate, useParams } from "react-router-dom";
+import { useEffect } from 'react';
 import AnimatedBackground from "../components/Background";
 import { motion } from 'framer-motion';
 import { ArrowLeft } from 'lucide-react';
@@ -6,6 +7,10 @@ import { ExternalLink, Link } from 'lucide-react';
 import projects from '../components/projects';
 const Descriptionpage = () => {
   const { id } = useParams();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const project = projects.find((p) => p.id === Number(id));
 
   if (!project) {
