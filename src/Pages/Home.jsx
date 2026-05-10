@@ -1,23 +1,106 @@
 import React, { useEffect, memo, useMemo } from "react"
-import { FileText, Code, Award, Globe, ArrowUpRight, Sparkles, UserCheck, ArrowLeft } from "lucide-react"
+import { FileText, Code, Award, Globe, ArrowUpRight, Sparkles, UserCheck, ArrowLeft, LayoutDashboard, TrendingUp, Users, Mail, BarChart3 } from "lucide-react"
+import { motion } from "framer-motion"
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import Techstacks from "../components/Techstacks"
 import { Link } from 'react-router-dom'
 
+const services = [
+  {
+    icon: LayoutDashboard,
+    title: "Custom CRM Development",
+    description: "Tailored CRM solutions built from scratch to match your unique business processes and workflows.",
+    color: "from-blue-500 to-cyan-500"
+  },
+  {
+    icon: TrendingUp,
+    title: "Lead Generation Dashboards",
+    description: "Interactive dashboards to track, manage, and optimize your lead generation campaigns in real-time.",
+    color: "from-purple-500 to-pink-500"
+  },
+  {
+    icon: Users,
+    title: "Contact Management",
+    description: "Comprehensive contact management systems with segmentation, tagging, and relationship tracking.",
+    color: "from-orange-500 to-red-500"
+  },
+  {
+    icon: Mail,
+    title: "Email Automation",
+    description: "Automated email sequences, drip campaigns, and follow-up systems to nurture leads effectively.",
+    color: "from-green-500 to-teal-500"
+  },
+  {
+    icon: BarChart3,
+    title: "Analytics & Reporting",
+    description: "Real-time analytics, custom reports, and data-driven insights to make informed business decisions.",
+    color: "from-indigo-500 to-purple-500"
+  },
+  {
+    icon: Users,
+    title: "Sales Pipeline Management",
+    description: "Visual pipeline management with deal tracking, stage automation, and conversion optimization.",
+    color: "from-amber-500 to-orange-500"
+  }
+];
 
+const ServicesSection = memo(() => (
+  <div id="Services" className="py-20 px-[5%] md:px-[7%] lg:px-[10%]">
+    <div className="max-w-7xl mx-auto">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-center mb-16"
+      >
+        <h2 className="text-3xl md:text-5xl font-bold mb-4">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-purple-500">
+            CRM & Lead Generation Services
+          </span>
+        </h2>
+        <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+          Building powerful, customized CRM systems and lead generation dashboards that drive business growth
+        </p>
+      </motion.div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {services.map((service, index) => (
+          <motion.div
+            key={service.title}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            viewport={{ once: true }}
+            className="group relative bg-gray-900/50 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
+          >
+            <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-2xl`} />
+            <div className="relative z-10">
+              <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                <service.icon className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">{service.description}</p>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  </div>
+));
 
 // Memoized Components
 const Header = memo(() => (
   <div className="text-center lg:mb-8 mb-2">
-    
-    <p 
+
+    <p
       className="mt-2 text-gray-400 max-w-2xl mx-auto text-base sm:text-lg flex items-center justify-center gap-2"
       data-aos="zoom-in-up"
       data-aos-duration="800"
     >
       <Sparkles className="w-5 h-5 text-orange-500" />
-      Transforming ideas into digital experiences
+      Building Professional CRM & Lead Generation Solutions
       <Sparkles className="w-5 h-5 text-purple-400" />
     </p>
   </div>
@@ -207,13 +290,14 @@ const AboutPage = () => {
               </span>
             </h2>
             
-            <p 
+            <p
               className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-400 leading-relaxed pb-4 sm:pb-0"
               data-aos="fade-right"
               data-aos-duration="1500"
             >
-             I create scalable Lead Management and CRM systems,
-             <br />Specializing in using the MERN stack and Next.js applications <br />Crafting Innovative Digital Experiences with Precision and Passion
+             I build professional CRM systems and Lead Generation Dashboards,
+             <br />Specializing in MERN stack and Next.js development
+             <br />Helping businesses automate sales, track leads, and scale operations with data-driven solutions
             </p>
 
             <div className="flex flex-col sm:flex-row items-center md:items-start gap-4 w-full">
@@ -251,8 +335,9 @@ const AboutPage = () => {
         <div className=" mt-32">
         <Techstacks/>
         </div>
-        
-        
+
+        <ServicesSection />
+
       </div>
 
       <style jsx>{`
