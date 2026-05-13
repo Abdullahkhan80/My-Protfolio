@@ -10,38 +10,20 @@ const services = [
   {
     icon: LayoutDashboard,
     title: "Custom CRM Development",
-    description: "Tailored CRM solutions built from scratch to match your unique business processes and workflows.",
+    description: "Tailored CRM solutions built to match your unique business processes and workflows.",
     color: "from-blue-500 to-cyan-500"
   },
   {
     icon: TrendingUp,
     title: "Lead Generation Dashboards",
-    description: "Interactive dashboards to track, manage, and optimize your lead generation campaigns in real-time.",
+    description: "Interactive dashboards to track and optimize your lead generation campaigns in real-time.",
     color: "from-purple-500 to-pink-500"
-  },
-  {
-    icon: Users,
-    title: "Contact Management",
-    description: "Comprehensive contact management systems with segmentation, tagging, and relationship tracking.",
-    color: "from-orange-500 to-red-500"
-  },
-  {
-    icon: Mail,
-    title: "Email Automation",
-    description: "Automated email sequences, drip campaigns, and follow-up systems to nurture leads effectively.",
-    color: "from-green-500 to-teal-500"
   },
   {
     icon: BarChart3,
     title: "Analytics & Reporting",
-    description: "Real-time analytics, custom reports, and data-driven insights to make informed business decisions.",
+    description: "Real-time analytics and custom reports for data-driven business decisions.",
     color: "from-indigo-500 to-purple-500"
-  },
-  {
-    icon: Users,
-    title: "Sales Pipeline Management",
-    description: "Visual pipeline management with deal tracking, stage automation, and conversion optimization.",
-    color: "from-amber-500 to-orange-500"
   }
 ];
 
@@ -61,7 +43,7 @@ const ServicesSection = memo(() => (
           </span>
         </h2>
         <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-          Building powerful, customized CRM systems and lead generation dashboards that drive business growth
+          Custom CRM systems and lead generation dashboards that drive business growth
         </p>
       </motion.div>
 

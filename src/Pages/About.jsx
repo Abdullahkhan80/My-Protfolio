@@ -208,9 +208,7 @@ const Home = () => {
                 <p className="text-base md:text-lg text-gray-400 max-w-xl leading-relaxed font-light"
                   data-aos="fade-up"
                   data-aos-delay="1000">
-                  Specializing in clean, functional design and cutting-edge development to help businesses make their mark online.
-                  I bring your digital vision to life through thoughtful design, solid development, and a focus on user experience.
-                  I create digital experiences that enhance brands and empower users.
+                  Full-Stack Developer and CRM Architect specializing in the MERN stack. I build custom lead management systems with WhatsApp and social media automation to turn manual workflows into scalable, high-performance business solutions.
                 </p>
 
                 {/* Tech Stack */}
