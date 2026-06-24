@@ -28,6 +28,20 @@ export const projects = [
     link: "https://pixora-sable.vercel.app"
   },
   {
+    id: 9,
+    title: "Royal Exclusive Limo (REL) CRM",
+    description: "REL (Royal Exclusive Limo) CRM — Full-stack automated rental workflow with Stripe payments, webhook lead ingestion, and role-based management for Admins, Dispatchers, and Drivers. Deployed a full-stack automated rental workflow system featuring secure Stripe payment integrations and real-time webhook lead ingestion. Built automated email pipelines for instant invoice dispatch and pending payment alerts, supported by a granular role-based management structure tailored for Admins, Dispatchers, and Drivers with real-time availability and route monitoring.",
+    image: "/projects/Gemini_Generated_Image_zg0f61zg0f61zg0f.png",
+    link: ""
+  },
+  {
+    id: 10,
+    title: "Anka OS — AI-Powered Project Management Platform",
+    description: "Anka OS — Full-stack AI-powered project management OS with Kanban boards, sprint planning, and GPT-4 coding agent. Built with Next.js 16, Express 5, Prisma, and PostgreSQL. Features AI code review, GitHub integration, real-time web terminal, role-based access control, S3 file uploads, and automated sprint planning with velocity tracking.",
+    image: "/projects/Gemini_Generated_Image_zg0f61zg0f61zg0f.png",
+    link: ""
+  },
+  {
     id: 5,
     title: "White Space Project Management",
     description: "A powerful project management platform designed to help teams collaborate, plan, and manage daily tasks efficiently.",
