@@ -80,11 +80,11 @@ const ContactPage = () => {
 
   return (
     <>
-      <div className="text-center lg:mt-[5%] mt-10 mb-2 px-[5%] md:px-[7%] lg:px-[10%]">
+      <div className="mx-auto mt-20 max-w-3xl px-[5%] text-center md:px-[7%] lg:px-[10%]">
         <h2
           data-aos="fade-down"
           data-aos-duration="1000"
-          className="inline-block text-3xl md:text-5xl font-bold text-center mx-auto text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-[#a855f7]"
+          className="mx-auto inline-block text-center text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-[#a855f7] md:text-5xl"
         >
           <span
             style={{
@@ -102,21 +102,21 @@ const ContactPage = () => {
         <p
           data-aos="fade-up"
           data-aos-duration="1100"
-          className="text-slate-400 max-w-2xl mx-auto text-sm md:text-base mt-2"
+          className="mx-auto mt-3 max-w-2xl text-sm leading-7 text-slate-400 md:text-base"
         >
           Got a question? Send me a message, and I'll get back to you soon.
         </p>
       </div>
 
       <div
-        className="h-auto mt-10 flex items-start md:items-center gap-8 md:gap-12 justify-center flex-wrap px-[5%] md:px-[7%] lg:px-[10%]"
+        className="mx-auto mt-10 grid max-w-7xl grid-cols-1 items-start gap-8 px-[5%] md:px-[7%] lg:grid-cols-2 lg:px-[10%]"
         id="Contact"
       >
-        <div className="  ">
+        <div>
           <div
             data-aos="fade-right"
             data-aos-duration="1200"
-            className="w-full max-w-lg bg-white/5 backdrop-blur-xl rounded-3xl shadow-2xl p-5 py-10 sm:p-10 transform transition-all duration-300 hover:shadow-[#6366f1]/10"
+            className="w-full bg-white/5 backdrop-blur-xl rounded-3xl shadow-2xl p-5 py-10 sm:p-10 transform transition-all duration-300 hover:shadow-[#6366f1]/10"
           >
             <div className="flex justify-between items-start mb-8">
               <div>
@@ -210,7 +210,7 @@ const ContactPage = () => {
         <div
             data-aos="fade-left"
             data-aos-duration="1200"
-            className="w-full max-w-lg bg-white/5 backdrop-blur-xl rounded-3xl shadow-2xl p-5 py-10 sm:p-10 transform transition-all duration-300 hover:shadow-[#6366f1]/10"
+            className="w-full bg-white/5 backdrop-blur-xl rounded-3xl shadow-2xl p-5 py-10 sm:p-10 transform transition-all duration-300 hover:shadow-[#6366f1]/10"
           >
      <SocialLinks />
 

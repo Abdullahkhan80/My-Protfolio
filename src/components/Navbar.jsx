@@ -9,10 +9,11 @@ const Navbar = () => {
     const location = useLocation();
     
     const navItems = [
-        { href: "#About", label: "Home" },
+        { href: "#Home", label: "Home" },
+        { href: "#About", label: "About" },
         { href: "#Services", label: "Services" },
-        { href: "#Porjects", label: "Projects" },
-        { href: "#Acheivements", label: "Achievements" },
+        { href: "#Projects", label: "Projects" },
+        { href: "#Achievements", label: "Achievements" },
         { href: "#Contact", label: "Contact" },
     ];
 

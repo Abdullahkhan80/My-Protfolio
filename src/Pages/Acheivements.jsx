@@ -11,7 +11,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white pt-20 px-[5%] md:px-[7%] lg:px-[10%]">
+    <div className="min-h-screen bg-[#0a0a0a] px-[5%] py-24 text-white md:px-[7%] lg:px-[10%]">
       {/* Back Button */}
       <div className="absolute top-6 left-6 z-50">
         <Link to="/">
@@ -28,7 +28,7 @@ const Projects = () => {
         transition={{ duration: 0.5 }}
         className="max-w-7xl mx-auto"
       >
-        <h2 className="inline-block text-3xl md:text-5xl p-5 font-bold text-center mx-auto text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-[#a855f7]">
+        <h2 className="mx-auto mb-12 block text-center text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-[#a855f7] md:text-5xl">
           <span style={{ color: '#111', WebkitBackgroundClip: 'text', backgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
             My Achievements
           </span>

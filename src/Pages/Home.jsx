@@ -9,14 +9,14 @@ import { Link } from 'react-router-dom'
 const services = [
   {
     icon: LayoutDashboard,
-    title: "Custom CRM Development",
-    description: "Tailored CRM solutions built to match your unique business processes and workflows.",
+    title: "AI Automation Systems",
+    description: "Tailored AI automation systems built to match your business processes and workflows.",
     color: "from-blue-500 to-cyan-500"
   },
   {
     icon: TrendingUp,
-    title: "Lead Generation Dashboards",
-    description: "Interactive dashboards to track and optimize your lead generation campaigns in real-time.",
+    title: "Workflow Automation",
+    description: "Automated workflows that connect tools, reduce manual work, and keep operations moving in real time.",
     color: "from-purple-500 to-pink-500"
   },
   {
@@ -28,22 +28,22 @@ const services = [
 ];
 
 const ServicesSection = memo(() => (
-  <div id="Services" className="py-20 px-[5%] md:px-[7%] lg:px-[10%]">
+  <div id="Services" className="py-20">
     <div className="max-w-7xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="text-center mb-16"
+        className="mx-auto mb-12 max-w-3xl text-center"
       >
         <h2 className="text-3xl md:text-5xl font-bold mb-4">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-purple-500">
-            CRM & Lead Generation Services
+            AI Automation Services
           </span>
         </h2>
-        <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-          Custom CRM systems and lead generation dashboards that drive business growth
+        <p className="mx-auto max-w-2xl text-base leading-7 text-gray-400 md:text-lg">
+          Custom AI automation systems and full-stack workflow tools that drive business growth
         </p>
       </motion.div>
 
@@ -82,14 +82,14 @@ const Header = memo(() => (
       data-aos-duration="800"
     >
       <Sparkles className="w-5 h-5 text-orange-500" />
-      Building Professional CRM & Lead Generation Solutions
+      Building Professional AI Automation Systems
       <Sparkles className="w-5 h-5 text-purple-400" />
     </p>
   </div>
 ));
 
 const ProfileImage = memo(() => (
-  <div className="flex justify-end items-center md:p-8 md:py-0 md:pb-0 p-0 py-2 pb-2">
+  <div className="flex items-center justify-center p-0 py-2 pb-2 md:justify-end md:p-8 md:py-0 md:pb-0">
     <div 
       className="relative group" 
       data-aos="fade-up"
@@ -247,13 +247,13 @@ const AboutPage = () => {
 
   return (
     <div
-      className="h-auto pb-[10%] text-white overflow-hidden px-[5%] md:px-[7%] lg:px-[10%] pt-20" 
+      className="overflow-hidden px-[5%] py-20 text-white md:px-[7%] lg:px-[10%]" 
       id="About"
     >
       <Header />
 
-      <div className="w-full mx-auto pt-8 sm:pt-12 relative">
-        <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-8 md:gap-10 lg:gap-16 items-center">
+      <div className="relative mx-auto w-full max-w-7xl pt-8 sm:pt-12">
+        <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-[0.95fr_1.05fr] lg:gap-16">
           <div className="space-y-6 text-center md:text-left">
             <h2 
               className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold"
@@ -277,12 +277,12 @@ const AboutPage = () => {
               data-aos="fade-right"
               data-aos-duration="1500"
             >
-             I build professional CRM systems and Lead Generation Dashboards,
-             <br />Specializing in MERN stack and Next.js development
-             <br />Helping businesses automate sales, track leads, and scale operations with data-driven solutions
+             I build professional AI automation systems,
+             <br />Specializing in full-stack and Next.js development
+             <br />Helping businesses automate workflows, connect tools, and scale operations with data-driven solutions
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center md:items-start gap-4 w-full">
+            <div className="flex w-full flex-col items-center justify-center gap-4 sm:flex-row md:justify-start">
               <a href="https://drive.google.com/file/d/1PHDajwHuJ4GL0en5OwoFZoA54FME3xX-/view?usp=sharing" className="w-full sm:w-auto">
               <button 
                 data-aos="fade-up"
@@ -314,7 +314,7 @@ const AboutPage = () => {
             ))}
           </div>
         </a> */}
-        <div className=" mt-32">
+        <div className="mt-20">
         <Techstacks/>
         </div>
 

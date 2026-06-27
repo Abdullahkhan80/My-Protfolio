@@ -10,7 +10,7 @@ const Featured = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <div ref={ref} className="text-white mt-10 text-center px-[5%] md:px-[7%] lg:px-[10%]">
+    <div ref={ref} className="px-[5%] py-20 text-center text-white md:px-[7%] lg:px-[10%]">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -18,7 +18,7 @@ const Featured = () => {
         className="max-w-7xl mx-auto"
       >
         <motion.h2 
-          className="inline-block text-3xl md:text-5xl py-10 md:py-16 font-bold text-center mx-auto text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-[#a855f7]"
+          className="mx-auto mb-12 inline-block text-center text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-[#a855f7] md:text-5xl"
           initial={{ opacity: 0, y: -30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -30 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -58,13 +58,13 @@ const Featured = () => {
         </motion.div>
       </motion.div>
       <motion.div 
-        className="pt-20 flex relative items-center cursor-pointer justify-center"
+        className="relative flex cursor-pointer items-center justify-center pt-12"
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 0.5, delay: 1 }}
       >
         <Link to="/projects"
-          className="w-full lg:w-auto sm:px-6 py-2 sm:py-3 rounded-lg border border-[#a855f7]/50 text-[#a855f7] font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center lg:justify-start gap-2 hover:bg-[#a855f7]/10 animate-bounce-slow delay-200"
+          className="flex w-full items-center justify-center gap-2 rounded-lg border border-[#a855f7]/50 px-6 py-2 font-medium text-[#a855f7] transition-all duration-300 hover:scale-105 hover:bg-[#a855f7]/10 sm:py-3 lg:w-auto lg:justify-start"
         >
           <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5" /> View Projects
 

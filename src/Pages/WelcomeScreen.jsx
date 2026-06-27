@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Code2, Github, Globe, User } from 'lucide-react';
+import { Globe } from 'lucide-react';
 import AOS from 'aos';
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import 'aos/dist/aos.css';
 const TypewriterEffect = ({ text }) => {
   const [displayText, setDisplayText] = useState('');
@@ -33,15 +32,6 @@ const BackgroundEffect = () => (
   <div className="absolute inset-0 overflow-hidden">
     <div className="absolute inset-0 bg-gradient-to-r from-gray-700 to-yellow-800 blur-3xl animate-pulse" />
     <div className="absolute inset-0 bg-gradient-to-tr from-neutral-700 via-transparent to-black blur-2xl animate-float" />
-  </div>
-);
-
-const IconButton = ({ Icon }) => (
-  <div className="relative group hover:scale-110 transition-transform duration-300">
-    <div className="absolute -inset-2 bg-gradient-to-r from-white to-orange-600 rounded-full blur opacity-30 group-hover:opacity-75 transition duration-300" />
-    <div className="relative p-2 sm:p-3 bg-black/50 backdrop-blur-sm rounded-full border border-white/10">
-      <Icon className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white" />
-    </div>
   </div>
 );
 
@@ -103,52 +93,24 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
         >
 
           <BackgroundEffect />
-          .
-          <div className="relative min-h-screen flex items-center justify-center px-4">
-            <div className="w-full max-w-4xl mx-auto">
-              {/* Icons */}
-              <motion.div
-                className="flex justify-center gap-3 sm:gap-4 md:gap-8 mb-6 sm:mb-8 md:mb-12"
-                variants={childVariants}
-              >
-                {/* {[Code2, User, Github].map((Icon, index) => (
-                  <div key={index} data-aos="fade-down" data-aos-delay={index * 200}>
-                    <IconButton Icon={Icon} />
-                  </div>
-                ))} */}
-
-              </motion.div>
+          <div className="relative flex min-h-screen items-center justify-center px-6 py-10">
+            <div className="mx-auto w-full max-w-4xl text-center">
               {/* Welcome Text */}
               <motion.div
-                className="text-center mb-6 sm:mb-8 md:mb-12"
+                className="mb-8 sm:mb-10"
                 variants={childVariants}
               >
-                <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-40 space-y-2 sm:space-y-4">
-                  <div className="mb-2 sm:mb-4">
-                    <span data-aos="fade-right" data-aos-delay="200" className="inline-block px-2 bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
-                      Welcome
-                    </span>{''}
-                    <span data-aos="fade-right" data-aos-delay="400" className="inline-block px-2 bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
-                      To
-                    </span>{''}
-                    <span data-aos="fade-right" data-aos-delay="600" className="inline-block px-2 bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
-                      My
-                    </span>
-                  </div>
-                  <div>
-                    <span data-aos="fade-up" data-aos-delay="800" className="inline-block px-2 bg-gradient-to-r from-orange-400 to-purple-600 bg-clip-text text-transparent">
-                      Portfolio
-                    </span>{''}
-                    <span data-aos="fade-up" data-aos-delay="1000" className="inline-block px-2 bg-gradient-to-r from-orange-400 to-purple-600 bg-clip-text text-transparent">
-                      Website
-                    </span>
-
-               
-                  </div>
+                <h1 className="text-4xl font-bold leading-tight sm:text-5xl md:text-7xl">
+                  <span data-aos="fade-right" data-aos-delay="200" className="block bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
+                    Welcome To My
+                  </span>
+                  <span data-aos="fade-up" data-aos-delay="600" className="mt-3 block bg-gradient-to-r from-orange-400 to-purple-600 bg-clip-text text-transparent">
+                    Portfolio Website
+                  </span>
                 </h1>
 
               </motion.div>
-              <div className="relative m-10 flex items-center justify-center">
+              <div className="relative flex items-center justify-center">
 
                <svg className="animate-spin h-16 w-16 text-purple-600 mb-4" viewBox="0 0 24 24">
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
@@ -158,7 +120,7 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
 
               {/* Website Link */}
               <motion.div
-                className="text-center"
+                className="mt-4"
                 variants={childVariants}
                 data-aos="fade-up"
                 data-aos-delay="1200"

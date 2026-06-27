@@ -1,22 +1,22 @@
 export const projects = [
   {
     id: 1,
-    title: "CRM Dashboard Pro",
-    description: "Enterprise-grade CRM system with lead tracking, pipeline management, customer analytics, and automated workflow automation. Features real-time data visualization, sales forecasting, and integrations.",
+    title: "AI Automation Dashboard",
+    description: "Enterprise-grade AI automation system with workflow tracking, customer insights, automated actions, and real-time operational visibility. Features data visualization, integrations, and practical automation flows.",
     image: "/projects/image_original",
     link: ""
   },
   {
     id: 2,
-    title: "Lead Generation Platform",
-    description: "Full-featured lead generation and management dashboard with automated lead capture, scoring, nurturing sequences, and conversion tracking. Includes email marketing automation and analytics.",
+    title: "AI Workflow Automation Platform",
+    description: "Full-featured automation platform with data capture, AI-assisted routing, follow-up sequences, conversion tracking, and analytics for business workflows.",
     image: "/projects/image_original (1)",
     link: ""
   },
   {
     id: 3,
-    title: "Sales & CRM Suite",
-    description: "Comprehensive sales management CRM with contact management, deal pipelines, task automation, team collaboration, and detailed reporting. Built for high-performance sales teams.",
+    title: "Business Automation Suite",
+    description: "Comprehensive automation suite with contact management, process flows, task automation, team collaboration, and detailed reporting for faster operations.",
     image: "/projects/image_original (2)",
     link: ""
   },
@@ -29,8 +29,8 @@ export const projects = [
   },
   {
     id: 9,
-    title: "Royal Exclusive Limo (REL) CRM",
-    description: "REL (Royal Exclusive Limo) CRM — Full-stack automated rental workflow with Stripe payments, webhook lead ingestion, and role-based management for Admins, Dispatchers, and Drivers. Deployed a full-stack automated rental workflow system featuring secure Stripe payment integrations and real-time webhook lead ingestion. Built automated email pipelines for instant invoice dispatch and pending payment alerts, supported by a granular role-based management structure tailored for Admins, Dispatchers, and Drivers with real-time availability and route monitoring.",
+    title: "Royal Exclusive Limo (REL) Automation",
+    description: "REL (Royal Exclusive Limo) automation system — Full-stack automated rental workflow with Stripe payments, webhook ingestion, and role-based management for Admins, Dispatchers, and Drivers. Deployed secure payment integrations, real-time webhook handling, automated email pipelines for invoice dispatch and payment alerts, plus real-time availability and route monitoring.",
     image: "/projects/Gemini_Generated_Image_zg0f61zg0f61zg0f.png",
     link: ""
   },
@@ -51,7 +51,7 @@ export const projects = [
   {
     id: 6,
     title: "Gourmet Haven Restaurant",
-    description: "Full-stack MERN restaurant application with interactive menu, online ordering system, and secure backend with MongoDB database.",
+    description: "Full-stack restaurant application with interactive menu, online ordering system, and secure backend with MongoDB database.",
     image: "/projects/project6.png",
     link: "https://gourmet-haven-git-main-abdullahs-projects-ec45321a.vercel.app/"
   },

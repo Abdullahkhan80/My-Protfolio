@@ -14,7 +14,7 @@ const MainTitle = memo(() => (
       <span className="relative inline-block">
         <span className="absolute -inset-2 bg-gradient-to-r from-[#6366f1] to-[#a855f7] blur-2xl opacity-20"></span>
         <span className="relative bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
-          MERN Stack
+          Full Stack
         </span>
       </span>
       <br />
@@ -87,7 +87,7 @@ const SocialLink = memo(({ icon: Icon, link }) => (
 const TYPING_SPEED = 50;
 const ERASING_SPEED = 30;
 const PAUSE_DURATION = 2000;
-const WORDS = ["Designing Digital Excellence", "Design. Develop. Deliver.", "Tech Enthusiast"];
+const WORDS = ["AI Automation Systems", "Workflow Automation", "Full-Stack AI Solutions"];
 const TECH_STACK = ["React", "Javascript", "Node.js", "Tailwind"];
 const SOCIAL_LINKS = [
   { icon: Github, link: "https://github.com/Abdullahkhan80" },
@@ -173,22 +173,22 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center py-12 px-[5%] md:px-[7%] lg:px-[10%]" id="Home">
+    <div className="flex min-h-screen flex-col items-center justify-center px-[5%] py-24 md:px-[7%] lg:px-[10%]" id="Home">
       <div className={`relative z-10 w-full transition-all duration-1000 ${isLoaded ? "opacity-100" : "opacity-0"}`}>
-        <div className="w-full mx-auto">
-          <div className="flex flex-col items-center justify-center mb-12">
+        <div className="mx-auto w-full max-w-7xl">
+          <div className="mb-10 flex flex-col items-center justify-center text-center lg:mb-14">
             <h2
-              className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-[#a855f7]"
+              className="text-sm font-semibold uppercase tracking-[0.28em] text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-[#a855f7]"
               data-aos="zoom-in-up"
               data-aos-duration="600"
             >
-              About Me
+              Portfolio
             </h2>
           </div>
 
-          <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-8 md:gap-10 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
             {/* Left Column */}
-            <div className="space-y-6 text-center md:text-left"
+            <div className="text-center lg:text-left"
               data-aos="fade-right"
               data-aos-delay="200">
               <div className="space-y-6">
@@ -197,7 +197,7 @@ const Home = () => {
 
 
                 {/* Typing Effect */}
-                <div className="h-8 flex items-center" data-aos="fade-up" data-aos-delay="800">
+                <div className="flex h-8 items-center justify-center lg:justify-start" data-aos="fade-up" data-aos-delay="800">
                   <span className="text-xl md:text-2xl bg-gradient-to-r from-gray-100 to-gray-300 bg-clip-text text-transparent font-light">
                     {text}
                   </span>
@@ -205,27 +205,27 @@ const Home = () => {
                 </div>
 
                 {/* Description */}
-                <p className="text-base md:text-lg text-gray-400 max-w-xl leading-relaxed font-light"
+                <p className="mx-auto max-w-xl text-base font-light leading-relaxed text-gray-400 md:text-lg lg:mx-0"
                   data-aos="fade-up"
                   data-aos-delay="1000">
-                  Full-Stack Developer and CRM Architect specializing in the MERN stack. I build custom lead management systems with WhatsApp and social media automation to turn manual workflows into scalable, high-performance business solutions.
+                  Full-Stack Developer specializing in AI automation systems. I build custom automations, workflow integrations, and AI-powered tools that turn manual processes into scalable, high-performance business solutions.
                 </p>
 
                 {/* Tech Stack */}
-                <div className="flex flex-wrap gap-3 justify-start" data-aos="fade-up" data-aos-delay="1200">
+                <div className="flex flex-wrap justify-center gap-3 lg:justify-start" data-aos="fade-up" data-aos-delay="1200">
                   {TECH_STACK.map((tech, index) => (
                     <TechStack key={index} tech={tech} />
                   ))}
                 </div>
 
                 {/* CTA Buttons */}
-                <div className="flex flex-row flex-wrap gap-4 w-full justify-start" data-aos="fade-up" data-aos-delay="1400">
+                <div className="flex w-full flex-row flex-wrap justify-center gap-4 lg:justify-start" data-aos="fade-up" data-aos-delay="1400">
                   <CTAButton href="/projects" text="Projects" icon={ExternalLink} />
                   <CTAButton href="#Contact" text="Contact Me" icon={Mail} />
                 </div>
 
                 {/* Social Links */}
-                <div className="hidden sm:flex gap-4 justify-start" data-aos="fade-up" data-aos-delay="1600">
+                <div className="hidden justify-center gap-4 sm:flex lg:justify-start" data-aos="fade-up" data-aos-delay="1600">
                   {SOCIAL_LINKS.map((social, index) => (
                     <SocialLink key={index} {...social} />
                   ))}
@@ -234,7 +234,7 @@ const Home = () => {
             </div>
 
             {/* Right Column - Optimized Lottie Animation */}
-            <div className="h-[300px] sm:h-[400px] lg:h-[500px] relative flex items-center justify-center"
+            <div className="relative flex h-[300px] items-center justify-center sm:h-[400px] lg:h-[500px]"
               onMouseEnter={() => setIsHovering(true)}
               onMouseLeave={() => setIsHovering(false)}
               data-aos="fade-left"

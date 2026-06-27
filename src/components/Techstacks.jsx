@@ -30,20 +30,20 @@ export default function TechStackOnly() {
   }, []);
 
   return (
-    <div className="py-20" id="TechStack">
+    <div className="py-16" id="TechStack">
       {/* Header section */}
-      <div className="text-center mb-16" data-aos="fade-up" data-aos-duration="1000">
+      <div className="mx-auto mb-12 max-w-3xl text-center" data-aos="fade-up" data-aos-duration="1000">
         <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-[#a855f7] mb-4">
           Tech Stack
         </h2>
-        <p className="text-gray-400 max-w-2xl mx-auto text-base md:text-lg">
+        <p className="mx-auto max-w-2xl text-base leading-7 text-gray-400 md:text-lg">
           Explore the technologies I use to build applications and websites.
         </p>
       </div>
 
       {/* Tech Stack Icons Section */}
       <div className="flex justify-center items-center">
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 sm:gap-8 w-full">
+        <div className="grid w-full grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6 md:grid-cols-4 lg:grid-cols-6">
           {techStacksData.map((stack, index) => (
             <div
               key={index}
