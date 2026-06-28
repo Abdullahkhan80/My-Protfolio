@@ -55,7 +55,7 @@ const ContactPage = () => {
         title: 'Success!',
         text: 'Your message has been sent successfully!',
         icon: 'success',
-        confirmButtonColor: '#6366f1',
+        confirmButtonColor: '#c9a24b',
         timer: 2000,
         timerProgressBar: true
       });
@@ -71,7 +71,7 @@ const ContactPage = () => {
         title: 'Error!',
         text: 'Something went wrong. Please try again later.',
         icon: 'error',
-        confirmButtonColor: '#6366f1'
+        confirmButtonColor: '#c9a24b'
       });
     } finally {
       setIsSubmitting(false);
@@ -80,31 +80,22 @@ const ContactPage = () => {
 
   return (
     <>
-      <div className="mx-auto mt-20 max-w-3xl px-[5%] text-center md:px-[7%] lg:px-[10%]">
+      <div className="mx-auto mt-20 flex max-w-3xl flex-col items-center px-[5%] text-center md:px-[7%] lg:px-[10%]">
+        <span className="eyebrow mb-5" data-aos="fade-down" data-aos-duration="900">Let's Talk</span>
         <h2
           data-aos="fade-down"
           data-aos-duration="1000"
-          className="mx-auto inline-block text-center text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-[#a855f7] md:text-5xl"
+          className="font-display text-3xl font-bold tracking-tight text-luxe-gradient md:text-5xl"
         >
-          <span
-            style={{
-              color: "#6366f1",
-              backgroundImage:
-                "linear-gradient(45deg, #FFA500 10%, #a855f7 93%)",
-              WebkitBackgroundClip: "text",
-              backgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            }}
-          >
-            Contact Me
-          </span>
+          Get Started Today
         </h2>
+        <div className="mt-5 h-px w-24 bg-gradient-to-r from-transparent via-[#e6c078]/60 to-transparent" />
         <p
           data-aos="fade-up"
           data-aos-duration="1100"
-          className="mx-auto mt-3 max-w-2xl text-sm leading-7 text-slate-400 md:text-base"
+          className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-slate-400 md:text-base"
         >
-          Got a question? Send me a message, and I'll get back to you soon.
+          Ready to automate your workflows? Send me a message and let's build your AI system.
         </p>
       </div>
 
@@ -116,18 +107,18 @@ const ContactPage = () => {
           <div
             data-aos="fade-right"
             data-aos-duration="1200"
-            className="w-full bg-white/5 backdrop-blur-xl rounded-3xl shadow-2xl p-5 py-10 sm:p-10 transform transition-all duration-300 hover:shadow-[#6366f1]/10"
+            className="premium-card w-full p-5 py-10 sm:p-10"
           >
             <div className="flex justify-between items-start mb-8">
               <div>
-                <h2 className="text-4xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-[#a855f7]">
+                <h2 className="font-display text-4xl font-bold mb-3 text-luxe-gradient">
                   Get in Touch
                 </h2>
                 <p className="text-gray-400">
                   Have something to discuss? Send me a message and let's talk.
                 </p>
               </div>
-              <Share2 className="w-10 h-10 text-[#6366f1] opacity-50" />
+              <Share2 className="w-10 h-10 text-[#e6c078] opacity-70" />
             </div>
 
             <form 
@@ -195,7 +186,7 @@ const ContactPage = () => {
                 data-aos-delay="400"
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-orange-500 to-[#a855f7] text-white py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-[#6366f1]/20 active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                className="btn-luxe w-full py-4 text-base disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:hover:translate-y-0"
               >
                 <Send className="w-5 h-5" />
                 {isSubmitting ? 'Sending...' : 'Send Message'}
@@ -210,7 +201,7 @@ const ContactPage = () => {
         <div
             data-aos="fade-left"
             data-aos-duration="1200"
-            className="w-full bg-white/5 backdrop-blur-xl rounded-3xl shadow-2xl p-5 py-10 sm:p-10 transform transition-all duration-300 hover:shadow-[#6366f1]/10"
+            className="premium-card w-full p-5 py-10 sm:p-10"
           >
      <SocialLinks />
 

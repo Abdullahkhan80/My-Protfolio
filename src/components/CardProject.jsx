@@ -38,10 +38,10 @@ const CardProject = ({ Img, Title, Description, Link: ProjectLink, id, index = 0
       }}
     >
             
-      <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-lg border border-white/10 shadow-2xl transition-all duration-500 hover:shadow-purple-500/30 hover:shadow-2xl">
-        <motion.div 
-          className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-50 group-hover:opacity-70 transition-opacity duration-300"
-          whileHover={{ 
+      <div className="premium-card relative overflow-hidden">
+        <motion.div
+          className="absolute inset-0 bg-gradient-to-br from-[#e6c078]/[0.06] via-purple-500/[0.06] to-orange-500/[0.06] opacity-60 group-hover:opacity-90 transition-opacity duration-300"
+          whileHover={{
             scale: 1.05,
             transition: { duration: 0.3 }
           }}
@@ -72,9 +72,9 @@ const CardProject = ({ Img, Title, Description, Link: ProjectLink, id, index = 0
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 + index * 0.1, duration: 0.5 }}
           >
-            <motion.h3 
-              className="text-xl font-semibold bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 bg-clip-text text-transparent"
-              whileHover={{ 
+            <motion.h3
+              className="font-display text-xl font-semibold bg-gradient-to-r from-[#f7e7ce] via-purple-200 to-[#e6c078] bg-clip-text text-transparent"
+              whileHover={{
                 scale: 1.02,
                 transition: { duration: 0.2 }
               }}
@@ -93,7 +93,7 @@ const CardProject = ({ Img, Title, Description, Link: ProjectLink, id, index = 0
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={handleLiveDemo}
-                  className="inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-200"
+                  className="inline-flex items-center space-x-2 text-[#e6c078] hover:text-[#f7e7ce] transition-colors duration-200"
                   whileHover={{ 
                     scale: 1.05,
                     x: 5,
@@ -121,7 +121,7 @@ const CardProject = ({ Img, Title, Description, Link: ProjectLink, id, index = 0
                   <Link
                     to={`/projects/Descriptionpage/${id}`}
                     onClick={handleDetails}
-                    className="inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-white/90 transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-purple-500/50"
+                    className="inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-white/90 border border-[#e6c078]/20 hover:border-[#e6c078]/50 transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-[#e6c078]/40"
                   >
                     <span className="text-sm font-medium">Details</span>
                     <ArrowRight className="w-4 h-4" />
@@ -133,8 +133,8 @@ const CardProject = ({ Img, Title, Description, Link: ProjectLink, id, index = 0
             </div>
           </motion.div>
           
-          <motion.div 
-            className="absolute inset-0 border border-white/0 group-hover:border-purple-500/50 rounded-xl transition-colors duration-300 -z-50"
+          <motion.div
+            className="absolute inset-0 border border-white/0 group-hover:border-[#e6c078]/30 rounded-xl transition-colors duration-300 -z-50"
             whileHover={{ 
               scale: 1.02,
               transition: { duration: 0.3 }

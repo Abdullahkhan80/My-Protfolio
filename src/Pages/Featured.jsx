@@ -17,16 +17,18 @@ const Featured = () => {
         transition={{ duration: 0.8 }}
         className="max-w-7xl mx-auto"
       >
-        <motion.h2 
-          className="mx-auto mb-12 inline-block text-center text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-[#a855f7] md:text-5xl"
+        <motion.div
+          className="mb-12 flex flex-col items-center"
           initial={{ opacity: 0, y: -30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -30 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <span style={{ color: '#111', WebkitBackgroundClip: 'text', backgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+          <span className="eyebrow mb-5">Selected Work</span>
+          <h2 className="font-display text-3xl font-bold tracking-tight md:text-5xl text-luxe-gradient">
             Featured Projects
-          </span>
-        </motion.h2>
+          </h2>
+          <div className="mt-5 h-px w-24 bg-gradient-to-r from-transparent via-[#e6c078]/60 to-transparent" />
+        </motion.div>
 
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
@@ -64,7 +66,7 @@ const Featured = () => {
         transition={{ duration: 0.5, delay: 1 }}
       >
         <Link to="/projects"
-          className="flex w-full items-center justify-center gap-2 rounded-lg border border-[#a855f7]/50 px-6 py-2 font-medium text-[#a855f7] transition-all duration-300 hover:scale-105 hover:bg-[#a855f7]/10 sm:py-3 lg:w-auto lg:justify-start"
+          className="btn-luxe-ghost flex w-full items-center justify-center gap-2 px-6 py-2.5 font-medium sm:py-3 lg:w-auto"
         >
           <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5" /> View Projects
 

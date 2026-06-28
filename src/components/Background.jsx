@@ -47,18 +47,19 @@ const AnimatedBackground = () => {
 			<div className="absolute inset-0">
 				<div
 					ref={(ref) => (blobRefs.current[0] = ref)}
-					className="absolute top-0 -left-4 md:w-96 md:h-96 w-72 h-72 bg-orange-500 rounded-full mix-blend-multiply filter blur-[128px] opacity-40 md:opacity-20 "></div>
+					className="absolute top-0 -left-4 md:w-96 md:h-96 w-72 h-72 bg-orange-500 rounded-full mix-blend-screen filter blur-[140px] opacity-25 md:opacity-15 "></div>
 				<div
 					ref={(ref) => (blobRefs.current[1] = ref)}
-					className="absolute top-0 -right-4 w-96 h-96 bg-black rounded-full mix-blend-multiply filter blur-[128px] opacity-40 md:opacity-20 hidden sm:block"></div>
+					className="absolute top-0 -right-4 w-96 h-96 bg-[#e6c078] rounded-full mix-blend-screen filter blur-[150px] opacity-20 md:opacity-[0.12] hidden sm:block"></div>
 				<div
 					ref={(ref) => (blobRefs.current[2] = ref)}
-					className="absolute -bottom-8 left-[-40%] md:left-20 w-96 h-96 bg-[#1D7C7C] rounded-full mix-blend-multiply filter blur-[128px] opacity-40 md:opacity-20 "></div>
+					className="absolute -bottom-8 left-[-40%] md:left-20 w-96 h-96 bg-[#a855f7] rounded-full mix-blend-screen filter blur-[140px] opacity-25 md:opacity-15 "></div>
 					<div
 					ref={(ref) => (blobRefs.current[3] = ref)}
-					className="absolute -bottom-10 right-20 w-96 h-96 bg-[#111818] rounded-full mix-blend-multiply filter blur-[128px] opacity-20 md:opacity-10 hidden sm:block"></div>
+					className="absolute -bottom-10 right-20 w-96 h-96 bg-[#1D7C7C] rounded-full mix-blend-screen filter blur-[150px] opacity-20 md:opacity-[0.12] hidden sm:block"></div>
 			</div>
-			<div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f10_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f10_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+			{/* Fine luxe grid, faded toward the edges */}
+			<div className="absolute inset-0 bg-[linear-gradient(to_right,#e6c0780a_1px,transparent_1px),linear-gradient(to_bottom,#e6c0780a_1px,transparent_1px)] bg-[size:28px_28px] [mask-image:radial-gradient(ellipse_at_center,black,transparent_80%)]"></div>
 		</div>
 	)
 }

@@ -37,11 +37,13 @@ const ServicesSection = memo(() => (
         viewport={{ once: true }}
         className="mx-auto mb-12 max-w-3xl text-center"
       >
-        <h2 className="text-3xl md:text-5xl font-bold mb-4">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-purple-500">
+        <span className="eyebrow mb-5">What I Deliver</span>
+        <h2 className="font-display text-3xl md:text-5xl font-bold mb-4 tracking-tight">
+          <span className="text-luxe-gradient">
             AI Automation Services
           </span>
         </h2>
+        <div className="mx-auto mb-5 h-px w-24 bg-gradient-to-r from-transparent via-[#e6c078]/60 to-transparent" />
         <p className="mx-auto max-w-2xl text-base leading-7 text-gray-400 md:text-lg">
           Custom AI automation systems and full-stack workflow tools that drive business growth
         </p>
@@ -55,15 +57,21 @@ const ServicesSection = memo(() => (
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="group relative bg-gray-900/50 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
+            className="premium-card group p-7 hover:-translate-y-2"
           >
-            <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-2xl`} />
+            <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-[0.08] transition-opacity duration-300 rounded-[1.25rem]`} />
             <div className="relative z-10">
-              <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                <service.icon className="w-7 h-7 text-white" />
+              <div className="relative mb-5 inline-flex">
+                <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300 ring-1 ring-[#e6c078]/30 shadow-lg`}>
+                  <service.icon className="w-7 h-7 text-white" />
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
+              <h3 className="font-display text-xl font-semibold text-white mb-2">{service.title}</h3>
               <p className="text-gray-400 text-sm leading-relaxed">{service.description}</p>
+              <div className="mt-5 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.2em] text-[#e6c078]/0 group-hover:text-[#e6c078] transition-colors duration-300">
+                Learn more
+                <ArrowUpRight className="w-3.5 h-3.5" />
+              </div>
             </div>
           </motion.div>
         ))}
@@ -75,16 +83,16 @@ const ServicesSection = memo(() => (
 // Memoized Components
 const Header = memo(() => (
   <div className="text-center lg:mb-8 mb-2">
-
-    <p
-      className="mt-2 text-gray-400 max-w-2xl mx-auto text-base sm:text-lg flex items-center justify-center gap-2"
+    <div
+      className="mt-2 flex items-center justify-center"
       data-aos="zoom-in-up"
       data-aos-duration="800"
     >
-      <Sparkles className="w-5 h-5 text-orange-500" />
-      Building Professional AI Automation Systems
-      <Sparkles className="w-5 h-5 text-purple-400" />
-    </p>
+      <span className="eyebrow">
+        <Sparkles className="w-3.5 h-3.5 text-[#e6c078]" />
+        Building Professional AI Automation Systems
+      </span>
+    </div>
   </div>
 ));
 
@@ -103,8 +111,8 @@ const ProfileImage = memo(() => (
       </div>
 
       <div className="relative">
-        <div className="w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden shadow-[0_0_40px_rgba(120,119,198,0.3)] transform transition-all duration-700 group-hover:scale-105">
-          <div className="absolute inset-0 border-4 border-white/20 rounded-full z-20 transition-all duration-700 group-hover:border-white/40 group-hover:scale-105" />
+        <div className="w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden shadow-[0_0_50px_rgba(230,192,120,0.25)] transform transition-all duration-700 group-hover:scale-105">
+          <div className="absolute inset-0 border-2 border-[#e6c078]/40 rounded-full z-20 transition-all duration-700 group-hover:border-[#e6c078]/70 group-hover:scale-105" />
           
           {/* Optimized overlay effects - disabled on mobile */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40 z-10 transition-opacity duration-700 group-hover:opacity-0 hidden sm:block" />
@@ -255,16 +263,16 @@ const AboutPage = () => {
       <div className="relative mx-auto w-full max-w-7xl pt-8 sm:pt-12">
         <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-[0.95fr_1.05fr] lg:gap-16">
           <div className="space-y-6 text-center md:text-left">
-            <h2 
-              className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold"
+            <h2
+              className="font-display text-2xl sm:text-3xl md:text-3xl lg:text-5xl font-bold tracking-tight leading-[1.15]"
               data-aos="fade-right"
               data-aos-duration="1000"
             >
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-[#a855f7]">
+              <span className="text-luxe-gradient">
                 Hello, I'm
               </span>
-              <span 
-                className="block mt-2 text-gray-200"
+              <span
+                className="block mt-2 text-white"
                 data-aos="fade-right"
                 data-aos-duration="1300"
               >
@@ -284,19 +292,19 @@ const AboutPage = () => {
 
             <div className="flex w-full flex-col items-center justify-center gap-4 sm:flex-row md:justify-start">
               <a href="https://drive.google.com/file/d/1PHDajwHuJ4GL0en5OwoFZoA54FME3xX-/view?usp=sharing" className="w-full sm:w-auto">
-              <button 
+              <button
                 data-aos="fade-up"
                 data-aos-duration="800"
-                className="w-full sm:w-auto px-6 py-2 sm:py-3 rounded-lg bg-gradient-to-r from-orange-500 to-[#a855f7] text-white font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl animate-bounce-slow"
+                className="btn-luxe w-full sm:w-auto px-6 py-2.5 sm:py-3"
               >
                 <FileText className="w-4 h-4 sm:w-5 sm:h-5" /> Download CV
               </button>
               </a>
               <Link to="/projects" className="w-full sm:w-auto">
-              <button 
+              <button
                 data-aos="fade-up"
                 data-aos-duration="1000"
-                className="w-full sm:w-auto px-6 py-2 sm:py-3 rounded-lg border border-[#a855f7]/50 text-[#a855f7] font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2 hover:bg-[#a855f7]/10 animate-bounce-slow delay-200"
+                className="btn-luxe-ghost w-full sm:w-auto px-6 py-2.5 sm:py-3 font-medium"
               >
                 <Code className="w-4 h-4 sm:w-5 sm:h-5" /> View Projects
               </button>

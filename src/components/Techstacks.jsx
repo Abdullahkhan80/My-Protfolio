@@ -32,10 +32,12 @@ export default function TechStackOnly() {
   return (
     <div className="py-16" id="TechStack">
       {/* Header section */}
-      <div className="mx-auto mb-12 max-w-3xl text-center" data-aos="fade-up" data-aos-duration="1000">
-        <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-[#a855f7] mb-4">
+      <div className="mx-auto mb-12 flex max-w-3xl flex-col items-center text-center" data-aos="fade-up" data-aos-duration="1000">
+        <span className="eyebrow mb-5">Toolkit</span>
+        <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight text-luxe-gradient mb-4">
           Tech Stack
         </h2>
+        <div className="mb-5 h-px w-24 bg-gradient-to-r from-transparent via-[#e6c078]/60 to-transparent" />
         <p className="mx-auto max-w-2xl text-base leading-7 text-gray-400 md:text-lg">
           Explore the technologies I use to build applications and websites.
         </p>

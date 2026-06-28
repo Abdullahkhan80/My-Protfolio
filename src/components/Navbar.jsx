@@ -77,19 +77,25 @@ const Navbar = () => {
         <nav
             className={`fixed w-full top-0 z-50 transition-all duration-500 ${
                 isOpen
-                    ? "bg-neutral-700 opacity-80 "
+                    ? "bg-[#111818]/95 backdrop-blur-xl"
                     : scrolled
-                    ? "bg-[#1d7c7c23] shadow-lg  shadow-[#1D7C7C] backdrop-blur-xl"
+                    ? "bg-[#111818]/70 shadow-[0_8px_30px_-12px_rgba(0,0,0,0.7)] backdrop-blur-xl border-b border-[#e6c078]/15"
                     : "bg-transparent"
             }`}
         >
+            {/* Gold hairline accent under the bar when scrolled */}
+            <div
+                className={`pointer-events-none absolute bottom-0 left-0 h-px w-full bg-gradient-to-r from-transparent via-[#e6c078]/60 to-transparent transition-opacity duration-500 ${
+                    scrolled && !isOpen ? "opacity-100" : "opacity-0"
+                }`}
+            />
             <div className="mx-auto px-4 sm:px-6 lg:px-[10%]">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
                     <div className="flex-shrink-0">
                         <Link
                             to="/"
-                            className="text-xl font-bold bg-gradient-to-r from-orange-500 to-[#a855f7] bg-clip-text text-transparent"
+                            className="font-display text-xl font-bold tracking-tight text-luxe-gradient"
                         >
                             Abdullah
                         </Link>
@@ -109,14 +115,14 @@ const Navbar = () => {
                                         <span
                                             className={`relative z-10 transition-colors duration-300 ${
                                                 activeSection === item.href.substring(1)
-                                                    ? "bg-gradient-to-r from-orange-500 to-[#a855f7] bg-clip-text text-transparent font-semibold"
+                                                    ? "text-luxe-gradient font-semibold"
                                                     : "text-[#e2d3fd] group-hover:text-white"
                                             }`}
                                         >
                                             {item.label}
                                         </span>
                                         <span
-                                            className={`absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-orange-500 to-[#a855f7] transform origin-left transition-transform duration-300 ${
+                                            className={`absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#f97316] via-[#e6c078] to-[#a855f7] transform origin-left transition-transform duration-300 ${
                                                 activeSection === item.href.substring(1)
                                                     ? "scale-x-100"
                                                     : "scale-x-0 group-hover:scale-x-100"
@@ -129,7 +135,7 @@ const Navbar = () => {
                                         to={item.href}
                                         className={`group relative px-1 py-2 text-sm font-medium ${
                                             location.pathname === item.href
-                                                ? "bg-gradient-to-r from-orange-500 to-[#a855f7] bg-clip-text text-transparent font-semibold"
+                                                ? "text-luxe-gradient font-semibold"
                                                 : "text-[#e2d3fd] group-hover:text-white"
                                         }`}
                                     >
@@ -137,7 +143,7 @@ const Navbar = () => {
                                             {item.label}
                                         </span>
                                         <span
-                                            className={`absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-orange-500 to-[#a855f7] transform origin-left transition-transform duration-300 ${
+                                            className={`absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#f97316] via-[#e6c078] to-[#a855f7] transform origin-left transition-transform duration-300 ${
                                                 location.pathname === item.href
                                                     ? "scale-x-100"
                                                     : "scale-x-0 group-hover:scale-x-100"
@@ -169,7 +175,7 @@ const Navbar = () => {
 
             {/* Mobile Menu Overlay */}
             <div
-                className={`md:hidden fixed inset-0 bg-neutral-700 transition-all duration-300 ease-in-out ${
+                className={`md:hidden fixed inset-0 bg-[#0d1212]/98 backdrop-blur-2xl transition-all duration-300 ease-in-out ${
                     isOpen
                         ? "opacity-100 translate-y-0"
                         : "opacity-0 translate-y-[-100%] pointer-events-none"
@@ -186,7 +192,7 @@ const Navbar = () => {
                                     onClick={(e) => scrollToSection(e, item.href)}
                                     className={`block px-4 py-3 text-lg font-medium transition-all duration-300 ease ${
                                         activeSection === item.href.substring(1)
-                                            ? "bg-gradient-to-r from-orange-500 to-[#a855f7] bg-clip-text text-transparent font-semibold"
+                                            ? "text-luxe-gradient font-semibold"
                                             : "text-[#e2d3fd] hover:text-white"
                                     }`}
                                     style={{
@@ -203,7 +209,7 @@ const Navbar = () => {
                                     to={item.href}
                                     className={`block px-4 py-3 text-lg font-medium transition-all duration-300 ease ${
                                         location.pathname === item.href
-                                            ? "bg-gradient-to-r from-orange-500 to-[#a855f7] bg-clip-text text-transparent font-semibold"
+                                            ? "text-luxe-gradient font-semibold"
                                             : "text-[#e2d3fd] hover:text-white"
                                     }`}
                                     style={{

@@ -1,16 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+	--gold-light: #f7e7ce;
+	--gold: #e6c078;
+	--gold-deep: #c9a24b;
+}
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: "Poppins", serif;
+	font-family: "Poppins", sans-serif;
 	scroll-behavior: smooth;
 	scrollbar-width: thin;
-	scrollbar-color:  #1D7C7C #111818;
+	scrollbar-color: #c9a24b #111818;
 }
 
 html,
@@ -20,6 +27,17 @@ body {
     background-image: linear-gradient(to left, #111818, #18181b 80%);
     background-blend-mode: normal;
     scroll-behavior: smooth !important;
+}
+
+/* Subtle film-grain texture for a premium dark surface */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 @keyframes blob {
@@ -52,39 +70,39 @@ body {
   }
   
   ::-webkit-scrollbar-track {
-	background: rgba(3, 0, 20, 0.4);
+	background: rgba(17, 24, 24, 0.5);
 	backdrop-filter: blur(8px);
 	-webkit-backdrop-filter: blur(8px);
-	border: 1px solid rgba(99, 102, 241, 0.1);
+	border: 1px solid rgba(230, 192, 120, 0.08);
   }
-  
+
   ::-webkit-scrollbar-thumb {
-	background: rgba(99, 102, 241, 0.3);
+	background: linear-gradient(180deg, rgba(230, 192, 120, 0.5), rgba(168, 85, 247, 0.45));
 	backdrop-filter: blur(4px);
 	-webkit-backdrop-filter: blur(4px);
 	border-radius: 20px;
-	border: 1px solid rgba(255, 255, 255, 0.1);
-	box-shadow: 
-	  inset 0 0 20px rgba(168, 85, 247, 0.2),
-	  0 0 10px rgba(99, 102, 241, 0.2);
+	border: 1px solid rgba(247, 231, 206, 0.15);
+	box-shadow:
+	  inset 0 0 20px rgba(230, 192, 120, 0.2),
+	  0 0 10px rgba(201, 162, 75, 0.2);
 	transition: all 0.3s ease;
   }
-  
+
   ::-webkit-scrollbar-thumb:hover {
-	background: rgba(99, 102, 241, 0.5);
-	border: 1px solid rgba(168, 85, 247, 0.3);
-	box-shadow: 
-	  inset 0 0 30px rgba(168, 85, 247, 0.3),
-	  0 0 15px rgba(99, 102, 241, 0.3);
+	background: linear-gradient(180deg, rgba(230, 192, 120, 0.75), rgba(168, 85, 247, 0.6));
+	border: 1px solid rgba(247, 231, 206, 0.3);
+	box-shadow:
+	  inset 0 0 30px rgba(230, 192, 120, 0.3),
+	  0 0 15px rgba(201, 162, 75, 0.3);
   }
-  
+
   /* When scrollbar is in active/clicked state */
   ::-webkit-scrollbar-thumb:active {
-	background: rgba(99, 102, 241, 0.6);
-	border: 1px solid rgba(168, 85, 247, 0.4);
-	box-shadow: 
-	  inset 0 0 40px rgba(168, 85, 247, 0.4),
-	  0 0 20px rgba(99, 102, 241, 0.4);
+	background: linear-gradient(180deg, rgba(230, 192, 120, 0.9), rgba(168, 85, 247, 0.7));
+	border: 1px solid rgba(247, 231, 206, 0.4);
+	box-shadow:
+	  inset 0 0 40px rgba(230, 192, 120, 0.4),
+	  0 0 20px rgba(201, 162, 75, 0.4);
   }
   
   ::-webkit-scrollbar-corner {
@@ -187,3 +205,166 @@ body {
 	user-select: none;
 	cursor: default;
   }
+
+/* ========================================================================
+   PREMIUM / LUXURY DESIGN SYSTEM
+   Champagne-gold accents layered over the existing orange → purple palette
+   ======================================================================== */
+
+@layer components {
+	/* Elegant display typography for headings */
+	.font-display {
+		font-family: "Sora", "Poppins", sans-serif;
+		letter-spacing: -0.01em;
+	}
+
+	/* Champagne-gold text (solid) */
+	.text-gold {
+		color: var(--gold);
+	}
+
+	/* Champagne-gold gradient text — for accent words / luxury labels */
+	.text-gold-gradient {
+		background-image: linear-gradient(110deg, var(--gold-light), var(--gold) 45%, var(--gold-deep));
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		color: transparent;
+	}
+
+	/* Signature heading gradient (orange → gold → purple) — the brand look */
+	.text-luxe-gradient {
+		background-image: linear-gradient(110deg, #f97316 0%, var(--gold) 42%, #a855f7 100%);
+		background-size: 200% auto;
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		color: transparent;
+		animation: gold-shimmer 8s linear infinite;
+	}
+
+	/* Small uppercase tracked "eyebrow" label above headings */
+	.eyebrow {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.6rem;
+		font-size: 0.7rem;
+		font-weight: 500;
+		text-transform: uppercase;
+		letter-spacing: 0.28em;
+		color: var(--gold);
+		padding: 0.4rem 1rem;
+		border-radius: 9999px;
+		border: 1px solid rgba(230, 192, 120, 0.22);
+		background: linear-gradient(180deg, rgba(230, 192, 120, 0.08), rgba(230, 192, 120, 0.02));
+		backdrop-filter: blur(6px);
+		-webkit-backdrop-filter: blur(6px);
+	}
+
+	.eyebrow::before {
+		content: "";
+		width: 6px;
+		height: 6px;
+		border-radius: 9999px;
+		background: var(--gold);
+		box-shadow: 0 0 10px 1px rgba(230, 192, 120, 0.7);
+	}
+
+	/* Thin gold hairline divider */
+	.gold-hairline {
+		height: 1px;
+		width: 100%;
+		background: linear-gradient(90deg, transparent, rgba(230, 192, 120, 0.55), transparent);
+	}
+
+	/* Premium glass card with a subtle gold gradient border (via mask) */
+	.premium-card {
+		position: relative;
+		border-radius: 1.25rem;
+		background:
+			linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.015));
+		backdrop-filter: blur(18px);
+		-webkit-backdrop-filter: blur(18px);
+		box-shadow: 0 24px 60px -28px rgba(0, 0, 0, 0.85);
+		transition: transform 0.4s ease, box-shadow 0.4s ease;
+	}
+
+	.premium-card::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		border-radius: inherit;
+		padding: 1px;
+		background: linear-gradient(140deg, rgba(247, 231, 206, 0.45), rgba(255, 255, 255, 0.06) 32%, rgba(168, 85, 247, 0.25) 78%, rgba(230, 192, 120, 0.4));
+		-webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+		-webkit-mask-composite: xor;
+		mask-composite: exclude;
+		pointer-events: none;
+		opacity: 0.85;
+		transition: opacity 0.4s ease;
+	}
+
+	.premium-card:hover::before {
+		opacity: 1;
+	}
+
+	.premium-card:hover {
+		box-shadow: 0 32px 70px -24px rgba(0, 0, 0, 0.9), 0 0 32px -8px rgba(230, 192, 120, 0.22);
+	}
+
+	/* Primary luxury button: orange→purple fill with a gold ring + sheen */
+	.btn-luxe {
+		position: relative;
+		overflow: hidden;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+		border-radius: 0.85rem;
+		background-image: linear-gradient(110deg, #f97316, #a855f7);
+		color: #fff;
+		font-weight: 600;
+		box-shadow: 0 12px 30px -10px rgba(168, 85, 247, 0.5), inset 0 0 0 1px rgba(247, 231, 206, 0.35);
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
+
+	.btn-luxe:hover {
+		transform: translateY(-2px) scale(1.02);
+		box-shadow: 0 18px 40px -10px rgba(168, 85, 247, 0.6), inset 0 0 0 1px rgba(247, 231, 206, 0.6);
+	}
+
+	.btn-luxe::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: -120%;
+		width: 60%;
+		height: 100%;
+		background: linear-gradient(110deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+		transform: skewX(-20deg);
+		transition: left 0.7s ease;
+	}
+
+	.btn-luxe:hover::after {
+		left: 130%;
+	}
+
+	/* Secondary / ghost luxury button with a gold outline */
+	.btn-luxe-ghost {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+		border-radius: 0.85rem;
+		color: var(--gold-light);
+		border: 1px solid rgba(230, 192, 120, 0.4);
+		background: linear-gradient(180deg, rgba(230, 192, 120, 0.06), transparent);
+		transition: all 0.3s ease;
+	}
+
+	.btn-luxe-ghost:hover {
+		border-color: rgba(230, 192, 120, 0.75);
+		background: linear-gradient(180deg, rgba(230, 192, 120, 0.12), rgba(168, 85, 247, 0.06));
+		transform: translateY(-2px);
+	}
+}
