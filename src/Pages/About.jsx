@@ -14,14 +14,14 @@ const MainTitle = memo(() => (
       <span className="relative inline-block">
         <span className="absolute -inset-2 bg-gradient-to-r from-[#6366f1] to-[#a855f7] blur-2xl opacity-20"></span>
         <span className="relative bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
-          Full Stack
+          AI Automation
         </span>
       </span>
       <br />
       <span className="relative inline-block mt-2">
         <span className="absolute -inset-2 bg-gradient-to-r from-orange-500 to-[#a855f7] blur-2xl opacity-20"></span>
         <span className="relative bg-gradient-to-r from-orange-500 to-[#a855f7] bg-clip-text text-transparent">
-          Developer
+          for Real Estate
         </span>
       </span>
     </h1>
@@ -87,7 +87,7 @@ const SocialLink = memo(({ icon: Icon, link }) => (
 const TYPING_SPEED = 50;
 const ERASING_SPEED = 30;
 const PAUSE_DURATION = 2000;
-const WORDS = ["AI Automation Systems", "Workflow Automation", "Full-Stack AI Solutions"];
+const WORDS = ["Lead Follow-Up Automation", "Listing & CRM Workflows", "AI Systems for Realtors"];
 const TECH_STACK = ["React", "Javascript", "Node.js", "Tailwind"];
 const SOCIAL_LINKS = [
   { icon: Github, link: "https://github.com/Abdullahkhan80" },
@@ -208,7 +208,7 @@ const Home = () => {
                 <p className="mx-auto max-w-xl text-base font-light leading-relaxed text-gray-400 md:text-lg lg:mx-0"
                   data-aos="fade-up"
                   data-aos-delay="1000">
-                  Full-Stack Developer specializing in AI automation systems. I build custom automations, workflow integrations, and AI-powered tools that turn manual processes into scalable, high-performance business solutions.
+                  I build AI automation systems for real estate agents and agencies. From instant lead follow-up and CRM integrations to listing management and appointment scheduling — I turn manual busywork into automated workflows so you can focus on closing deals.
                 </p>
 
                 {/* Tech Stack */}

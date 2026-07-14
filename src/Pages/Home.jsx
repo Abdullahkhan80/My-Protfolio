@@ -45,7 +45,7 @@ const ServicesSection = memo(() => (
         </h2>
         <div className="mx-auto mb-5 h-px w-24 bg-gradient-to-r from-transparent via-[#e6c078]/60 to-transparent" />
         <p className="mx-auto max-w-2xl text-base leading-7 text-gray-400 md:text-lg">
-          Custom AI automation systems and full-stack workflow tools that drive business growth
+          Custom AI automation systems built for real estate agents, brokers, and agencies
         </p>
       </motion.div>
 
@@ -90,7 +90,7 @@ const Header = memo(() => (
     >
       <span className="eyebrow">
         <Sparkles className="w-3.5 h-3.5 text-[#e6c078]" />
-        Building Professional AI Automation Systems
+        Building AI Automation Systems for Real Estate
       </span>
     </div>
   </div>
@@ -285,9 +285,9 @@ const AboutPage = () => {
               data-aos="fade-right"
               data-aos-duration="1500"
             >
-             I build professional AI automation systems,
-             <br />Specializing in full-stack and Next.js development
-             <br />Helping businesses automate workflows, connect tools, and scale operations with data-driven solutions
+             I build AI automation systems for real estate professionals,
+             <br />Specializing in lead follow-up, CRM workflows, and listing automation
+             <br />Helping agents and agencies capture more leads, respond faster, and close more deals on autopilot
             </p>
 
             <div className="flex w-full flex-col items-center justify-center gap-4 sm:flex-row md:justify-start">
