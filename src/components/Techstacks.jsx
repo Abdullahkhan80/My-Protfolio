@@ -1,6 +1,4 @@
-import React, { useEffect, useState, useCallback } from "react";
-import { db, collection } from "../firebase";
-import { getDocs } from "firebase/firestore";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import TechStackIcon from "../components/TechStackIcon";
 import AOS from "aos";

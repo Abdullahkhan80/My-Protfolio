@@ -1,18 +1,21 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import React, { useState } from 'react';
+import React, { useState, lazy, Suspense } from 'react';
 import "./index.css";
-import Home from "./Pages/Home.jsx";
-import Featured from "./Pages/Featured";
-import About from "./Pages/About";
-import AnimatedBackground from "./components/Background";
-import Navbar from "./components/Navbar";
-import ContactPage from "./Pages/Contact";
 import WelcomeScreen from "./Pages/WelcomeScreen";
 import { AnimatePresence } from 'framer-motion';
-import Projects from "./Pages/Projects";
-import Descriptionpage from "./Pages/Descriptionpage";
-import Acheivements from "./Pages/Acheivements.jsx";
-import Certificate from "./components/Certificate.jsx";
+import LoadingScreen from "./components/LoadingScreen";
+
+const Home = lazy(() => import("./Pages/Home.jsx"));
+const Featured = lazy(() => import("./Pages/Featured"));
+const About = lazy(() => import("./Pages/About"));
+const AnimatedBackground = lazy(() => import("./components/Background"));
+const Navbar = lazy(() => import("./components/Navbar"));
+const ContactPage = lazy(() => import("./Pages/Contact"));
+const Projects = lazy(() => import("./Pages/Projects"));
+const Descriptionpage = lazy(() => import("./Pages/Descriptionpage"));
+const Acheivements = lazy(() => import("./Pages/Acheivements.jsx"));
+const Certificate = lazy(() => import("./components/Certificate.jsx"));
+
 const LandingPage = ({ showWelcome, setShowWelcome }) => {
   return (
     <>
@@ -23,16 +26,16 @@ const LandingPage = ({ showWelcome, setShowWelcome }) => {
       </AnimatePresence>
 
       {!showWelcome && (
-        <>
+        <Suspense fallback={<LoadingScreen />}>
           <Navbar />
           <AnimatedBackground />
           <About />
           <Home />
           <div id="Projects">
-          <Featured />
+            <Featured />
           </div>
           <div id="Achievements" >
-          <Certificate/>
+            <Certificate/>
           </div>
           <ContactPage />
           <footer>
@@ -47,14 +50,14 @@ const LandingPage = ({ showWelcome, setShowWelcome }) => {
               </span>
             </center>
           </footer>
-        </>
+        </Suspense>
       )}
     </>
   );
 };
 
 const ProjectPageLayout = () => (
-  <>
+  <Suspense fallback={<LoadingScreen />}>
     <AnimatedBackground />
     <Projects />
     <footer>
@@ -69,7 +72,7 @@ const ProjectPageLayout = () => (
         </span>
       </center>
     </footer>
-  </>
+  </Suspense>
 );
 
 function App() {
@@ -77,12 +80,14 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<LandingPage showWelcome={showWelcome} setShowWelcome={setShowWelcome} />} />
-        <Route path="/projects" element={<ProjectPageLayout />} />
-        <Route path="/projects/Descriptionpage/:id" element={<Descriptionpage />} />
-        <Route path="/Acheivements" element={<Acheivements/>} />
-      </Routes>
+      <Suspense fallback={<LoadingScreen />}>
+        <Routes>
+          <Route path="/" element={<LandingPage showWelcome={showWelcome} setShowWelcome={setShowWelcome} />} />
+          <Route path="/projects" element={<ProjectPageLayout />} />
+          <Route path="/projects/Descriptionpage/:id" element={<Descriptionpage />} />
+          <Route path="/Acheivements" element={<Acheivements/>} />
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   );
 }

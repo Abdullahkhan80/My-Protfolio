@@ -10,36 +10,44 @@ const AnimatedBackground = () => {
 	]
 
 	useEffect(() => {
-		let currentScroll = 0
-		let requestId
+		let ticking = false;
 
-		const handleScroll = () => {
-			const newScroll = window.pageYOffset
-			currentScroll = newScroll
+		const updatePosition = () => {
+			const newScroll = window.pageYOffset;
 
 			blobRefs.current.forEach((blob, index) => {
-				const initialPos = initialPositions[index]
+				if (!blob) return;
+				const initialPos = initialPositions[index];
 
 				// Calculating movement in both X and Y direction
-				const xOffset = Math.sin(newScroll / 100 + index * 0.5) * 340 // Horizontal movement
-				const yOffset = Math.cos(newScroll / 100 + index * 0.5) * 40 // Vertical movement
+				const xOffset = Math.sin(newScroll / 100 + index * 0.5) * 340; // Horizontal movement
+				const yOffset = Math.cos(newScroll / 100 + index * 0.5) * 40;  // Vertical movement
 
-				const x = initialPos.x + xOffset
-				const y = initialPos.y + yOffset
+				const x = initialPos.x + xOffset;
+				const y = initialPos.y + yOffset;
 
 				// Apply transformation with smooth transition
-				blob.style.transform = `translate(${x}px, ${y}px)`
-				blob.style.transition = "transform 1.4s ease-out"
-			})
+				blob.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+				blob.style.transition = "transform 1.4s ease-out";
+			});
 
-			requestId = requestAnimationFrame(handleScroll)
-		}
+			ticking = false;
+		};
 
-		window.addEventListener("scroll", handleScroll)
+		const handleScroll = () => {
+			if (!ticking) {
+				requestAnimationFrame(updatePosition);
+				ticking = true;
+			}
+		};
+
+		// Run once on mount to position items correctly
+		updatePosition();
+
+		window.addEventListener("scroll", handleScroll, { passive: true });
 		return () => {
-			window.removeEventListener("scroll", handleScroll)
-			cancelAnimationFrame(requestId)
-		}
+			window.removeEventListener("scroll", handleScroll);
+		};
 	}, [])
 
 	return (
