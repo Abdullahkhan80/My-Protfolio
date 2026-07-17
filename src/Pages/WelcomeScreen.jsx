@@ -29,10 +29,10 @@ const TypewriterEffect = ({ text }) => {
 
 const BackgroundEffect = () => (
   <div className="absolute inset-0 overflow-hidden">
-    {/* Elegant champagne-gold + purple glow on a deep luxe base (Responsive sizes) */}
-    <div className="absolute -top-1/4 left-1/2 -translate-x-1/2 w-[30rem] h-[30rem] sm:w-[60rem] sm:h-[60rem] rounded-full bg-[#e6c078]/10 blur-[80px] sm:blur-[140px] animate-pulse" />
-    <div className="absolute bottom-[-10%] left-[5%] w-[20rem] h-[20rem] sm:w-[40rem] sm:h-[40rem] rounded-full bg-[#a855f7]/10 blur-[80px] sm:blur-[130px] animate-float" />
-    <div className="absolute bottom-[-15%] right-[2%] w-[18rem] h-[18rem] sm:w-[36rem] sm:h-[36rem] rounded-full bg-[#f97316]/[0.07] blur-[70px] sm:blur-[130px] animate-pulse" />
+    {/* Performant radial-gradient orbs instead of heavy blur filters */}
+    <div className="absolute -top-1/4 left-1/2 -translate-x-1/2 w-[30rem] h-[30rem] sm:w-[60rem] sm:h-[60rem] rounded-full bg-[radial-gradient(circle,rgba(230,192,120,0.10)_0%,transparent_70%)] animate-pulse" />
+    <div className="absolute bottom-[-10%] left-[5%] w-[20rem] h-[20rem] sm:w-[40rem] sm:h-[40rem] rounded-full bg-[radial-gradient(circle,rgba(168,85,247,0.10)_0%,transparent_70%)] animate-float-soft" />
+    <div className="absolute bottom-[-15%] right-[2%] w-[18rem] h-[18rem] sm:w-[36rem] sm:h-[36rem] rounded-full bg-[radial-gradient(circle,rgba(249,115,22,0.07)_0%,transparent_70%)] animate-pulse" />
     {/* fine grid */}
     <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_at_center,black,transparent_75%)]" />
   </div>
@@ -46,7 +46,7 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
       setIsLoading(false);
       const exitTimer = setTimeout(() => {
         onLoadingComplete?.();
-      }, 800);
+      }, 500);
       return () => clearTimeout(exitTimer);
     }, 2200);
 
@@ -63,13 +63,11 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
     },
     exit: {
       opacity: 0,
-      scale: 1.1,
-      filter: "blur(10px)",
+      scale: 1.05,
       transition: {
-        duration: 0.8,
+        duration: 0.5,
         ease: "easeInOut",
-        when: "beforeChildren",
-        staggerChildren: 0.08
+        staggerChildren: 0.05
       }
     }
   };
@@ -85,10 +83,10 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
       }
     },
     exit: {
-      y: -20,
+      y: -15,
       opacity: 0,
       transition: {
-        duration: 0.4,
+        duration: 0.3,
         ease: "easeInOut"
       }
     }

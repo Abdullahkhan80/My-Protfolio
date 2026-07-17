@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, memo } from "react";
+import React, { useEffect, useRef, memo, useState } from "react";
 import * as THREE from "three";
 import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
 import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
@@ -23,6 +23,7 @@ function beatOpacity(p, s, e) {
 }
 
 const Home = () => {
+  const [isReady, setIsReady] = useState(false);
   const sectionRef = useRef(null);
   const containerRef = useRef(null);
   const canvasRef = useRef(null);
@@ -43,11 +44,15 @@ const Home = () => {
   const DUR = 12.75;
 
   useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    // Defer heavy Three.js initialization to avoid blocking the
+    // main thread during the welcome-to-home transition.
+    const initDelay = setTimeout(() => {
     // -------------------------------------------------------------
     // THREE.JS SETUP
     // -------------------------------------------------------------
-    const canvas = canvasRef.current;
-    if (!canvas) return;
 
     const isMobile = window.innerWidth < 768;
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -373,6 +378,9 @@ const Home = () => {
       rafId = requestAnimationFrame(raf);
     }
 
+    // Signal that Three.js is ready so the canvas can fade in
+    setIsReady(true);
+
     // Resize handlers
     const handleResize = () => {
       const W = window.innerWidth;
@@ -386,7 +394,7 @@ const Home = () => {
 
     window.addEventListener("resize", handleResize);
 
-    // Cleanup
+    // Cleanup for Three.js resources
     return () => {
       window.removeEventListener("pointermove", handlePointerMove);
       window.removeEventListener("resize", handleResize);
@@ -400,6 +408,10 @@ const Home = () => {
         });
       }
     };
+    }, 300); // end of initDelay setTimeout
+
+    // Cleanup the timeout itself if component unmounts before init
+    return () => clearTimeout(initDelay);
   }, []);
 
   // -------------------------------------------------------------
@@ -529,6 +541,8 @@ const Home = () => {
           zIndex: -1,
           pointerEvents: "none",
           display: "block",
+          opacity: isReady ? 1 : 0,
+          transition: "opacity 1.2s ease-in-out",
         }}
       />
 
