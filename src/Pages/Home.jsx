@@ -3,7 +3,7 @@ import { FileText, Code, Award, Globe, ArrowUpRight, Sparkles, UserCheck, ArrowL
 import { motion } from "framer-motion"
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import Techstacks from "../components/Techstacks"
+import Packages from "../components/Packages"
 import { Link } from 'react-router-dom'
 
 const services = [
@@ -323,7 +323,7 @@ const AboutPage = () => {
           </div>
         </a> */}
         <div className="mt-20">
-        <Techstacks/>
+        <Packages/>
         </div>
 
         <ServicesSection />
