@@ -8,10 +8,10 @@ const beatsData = [
   { s: -0.05, e: 0.08, subtitle: "AI Automation", title: <>Automating Leads,<br />Closing Deals</>, isH1: true },
   { s: 0.09, e: 0.25, title: "Instant Follow-Up", desc: "Capture, qualify, and respond to incoming leads in under 60 seconds, 24/7." },
   { s: 0.26, e: 0.41, subtitle: "Smarter Workflows", title: "Connected CRMs" },
-  { s: 0.42, e: 0.58, title: "Autonomous Agents", desc: "AI agents handling listing follow-ups, appointment scheduling, and nurturing." },
+  { s: 0.42, e: 0.58, title: "Autonomous Agents", desc: "AI agents handling lead follow-ups, appointment scheduling, and nurturing." },
   { s: 0.59, e: 0.75, subtitle: "Scale Operations", title: "Done on Autopilot" },
   { s: 0.76, e: 0.91, title: "Zero Busywork" },
-  { s: 0.92, e: 1.05, subtitle: "AI For Realtors", title: "Abdullah Systems", desc: "Supercharge your agency. Explore my portfolio below.", isLuxeTitle: true }
+  { s: 0.92, e: 1.05, subtitle: "AI For Businesses", title: "Abdullah Systems", desc: "Supercharge your business operations. Explore my portfolio below.", isLuxeTitle: true }
 ];
 
 function beatOpacity(p, s, e) {

@@ -106,7 +106,7 @@ export default function Packages() {
         </h2>
         <div className="mb-5 h-px w-24 bg-gradient-to-r from-transparent via-[#e6c078]/60 to-transparent" />
         <p className="mx-auto max-w-2xl text-base leading-7 text-gray-400 md:text-lg">
-          Strategic technology investments for real estate teams. Choose a tier or contact me for bespoke enterprise solutions.
+          Strategic technology investments for professional businesses. Choose a tier or contact me for bespoke enterprise solutions.
         </p>
       </div>
 
